@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* css 代码  */
+        </style>
+        <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    </head>
+    <body>
+        <div id="container" style="max-width:1800px;height:900px"></div>
+        <script>
+            // JS 代码
+            var chart = Highcharts.chart('container', {
+		title: {
+				text: '准入各个阶段耗时图'
+		},
+		subtitle: {
+				text: '数据来源：runner投递'
+		},
+		yAxis: {
+				title: {
+						text: '消耗时间'
+				}
+		},
+		legend: {
+				layout: 'vertical',
+				align: 'right',
+				verticalAlign: 'middle'
+		},
+		plotOptions: {
+				series: {
+						label: {
+								connectorAllowed: false
+						},
+						pointStart: 0
+				}
+		},
+		series: [{
+				name: 'runner执行总时长',
+				data: [0,0,0,0,0,688,715,682,710,700,704,745,702,700,681,729,757,799,759,763,733,779,719,750,770,771,788,]//runner执行总时长数据
+		}, {
+				name: 'runner初始化时长',
+				data: [0,0,0,0,0,146,158,151,147,146,153,158,164,136,145,147,159,208,161,164,149,171,136,159,185,168,186,]//runner初始化时长数据
+		}, {
+				name: 'runner安装apk时长',
+				data: [0,0,0,0,0,129,135,133,126,127,133,139,147,117,130,132,139,185,139,139,130,146,121,146,170,148,167,]//runner安装apk时长数据
+		}, {
+				name: '冒烟用例1执行时长',
+				data: [0,0,0,0,0,155,170,152,169,147,159,165,152,171,149,166,165,177,152,168,155,175,140,166,158,170,153,]//冒烟用例1执行时长数据
+		}, {
+				name: '冒烟用例2执行时长',
+				data: [0,0,0,0,0,108,98,100,101,111,95,108,111,98,108,109,121,104,121,114,117,114,129,108,118,114,122,]//冒烟用例2执行时长数据
+		}, {
+				name: '冒烟用例3执行时长',
+				data: [0,0,0,0,0,105,116,115,122,126,123,132,100,123,107,127,116,122,126,127,121,127,116,130,121,129,135,]//冒烟用例3执行时长数据
+		}, {
+				name: '冒烟用例4执行时长',
+				data: [0,0,0,0,0,81,69,74,68,78,72,79,86,70,77,70,87,80,94,79,89,82,85,77,83,80,86,]//冒烟用例4执行时长数据
+		}, {
+				name: '冒烟用例5执行时长',
+				data: [0,0,0,0,0,64,71,59,71,62,70,72,59,72,64,80,75,77,73,81,71,77,81,80,74,80,75,]//冒烟用例5执行时长数据
+		}],
+		responsive: {
+				rules: [{
+						condition: {
+								maxWidth: 3500
+						},
+						chartOptions: {
+								legend: {
+										layout: 'horizontal',
+										align: 'center',
+										verticalAlign: 'bottom'
+								}
+						}
+				}]
+		}
+});
+        </script>
+    </body>
+</html>

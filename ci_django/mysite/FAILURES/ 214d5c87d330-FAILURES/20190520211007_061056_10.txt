@@ -1,0 +1,2457 @@
+[2019-05-20 21:09:17] [STEP] === START ===
+[2019-05-20 21:09:17] [STEP] start run.sh
+[2019-05-20 21:09:17] [STEP] prepare task directory
+[2019-05-20 21:09:17] [STEP] get resource list
+http://10.13.43.215/matlab/query/inner/task/taskinner.php?format=shell&method=getResource&tid=20190520211007_061056_10&account=yusongqi&token=008849
+http##http://10.13.43.127:8888/view/Android基线编译/job/Android_iQiYi_Build_Trunk/lastSuccessfulBuild/artifact/output/apk/IQiyi.apk##testBaseApk.apk&&http##http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testCaseApk.apk##testCaseApk.apk&&http##http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testApk.apk##testApk.apk&&http##http://10.13.43.215/tasks/20190520/21/20190520211007_936223_1/20190520211007_061056_10.dcase.list##case.json
+[2019-05-20 21:09:18] [STEP] download resource file
+http://10.13.43.127:8888/view/Android基线编译/job/Android_iQiYi_Build_Trunk/lastSuccessfulBuild/artifact/output/apk/IQiyi.apk => testBaseApk.apk
+[2019-05-20 21:09:38] [STEP] download resource file OK
+-rw-r--r-- 1 root root 57450051 5月  20 21:09 testBaseApk.apk
+[2019-05-20 21:09:38] [STEP] download resource file
+http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testCaseApk.apk => testCaseApk.apk
+[2019-05-20 21:09:39] [STEP] download resource file OK
+-rw-r--r-- 1 root root 2608702 5月  20 21:09 testCaseApk.apk
+[2019-05-20 21:09:39] [STEP] download resource file
+http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testApk.apk => testApk.apk
+[2019-05-20 21:09:45] [STEP] download resource file OK
+-rw-r--r-- 1 root root 25733961 5月  20 21:09 testApk.apk
+[2019-05-20 21:09:45] [STEP] download resource file
+http://10.13.43.215/tasks/20190520/21/20190520211007_936223_1/20190520211007_061056_10.dcase.list => case.json
+[2019-05-20 21:09:45] [STEP] download resource file OK
+-rw-r--r-- 1 root root 261 5月  20 21:09 case.json
+[2019-05-20 21:09:45] [STEP] get config
+{"self_package":"","run_times":"0","is_plugin":"false"}
+[2019-05-20 21:09:45] [STEP] get script.sh
+http://10.13.43.215/matlab/query/inner/task/taskinner.php?format=shell&method=getScript&name=start&tid=20190520211007_061056_10&account=yusongqi&token=008849
+http://10.13.43.215/matlab/scripts/slns/uiautomator2/start.sh
+[2019-05-20 21:09:46] [STEP] ====== screen lock status - start ======
+    mStatusBar=Window{b02eca4 u0 StatusBar} isStatusBarKeyguard=false
+[2019-05-20 21:09:46] [STEP] ======
+    mShowingLockscreen=false mShowingDream=false mDreamingLockscreen=false mDreamingSleepToken=null
+[2019-05-20 21:09:46] [STEP] ====== screen lock status - stop ======
+[21:09:46 GMT+8][START] ====== SCREEN LOCK DETECTION ======
+[ '    mStatusBar=Window{b02eca4 u0 StatusBar} isStatusBarKeyguard=false' ]
+[ '    mShowingLockscreen=false mShowingDream=false mDreamingLockscreen=false mDreamingSleepToken=null' ]
+ScreenLock Detection - 1: false
+[21:09:46 GMT+8][ERROR] No need to unlock device
+[21:09:46 GMT+8][END] install process end: 0
+[2019-05-20 21:09:46] [STEP] ====== Network Detection - start ======
+[CMD] adb -s 214d5c87d330 shell ping -c 5 aip.baidubce.com
+[STDOUT] PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=48.7 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=28.6 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=25.2 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=22.6 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=23.6 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 22.691/29.793/48.741/9.691 ms
+[2019-05-20 21:09:51] [STEP] ====== Network Detection - end ======
+[2019-05-20 21:09:51] [STEP] ====== Airplane Mode - start ======
+mAirplaneModeOn false
+[2019-05-20 21:09:52] [STEP] ====== Airplane Mode - end ======
+[2019-05-20 21:09:52] [STEP] ====== ATX Operation - start ======
+[CMD] adb -s 214d5c87d330 shell /data/local/tmp/atx-agent server --stop
+[STDERR] /system/bin/sh: /data/local/tmp/atx-agent: not found
+=== Kill ATX Agent ===
+
+=== After kill ===
+[2019-05-20 21:09:52] [STEP] ====== ATX Operation - end ======
+[2019-05-20 21:09:52] [STEP] start.sh
+/bin/bash start.sh 214d5c87d330 868689021237244 20190520211007_936223_1 20190520211007_061056_10
+/home/stf/code/provider/tasks/20190520211007_061056_10
+[2019-05-20 21:09:52][STEP] get runner.jar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3528k  100 3528k    0     0  10.1M      0 --:--:-- --:--:-- --:--:-- 10.1M
+-rw-r--r-- 1 root root 3613031 5月  20 21:09 runner.jar
+[2019-05-20 21:09:52][STEP] check files
+总用量 87328
+-rw-r--r-- 1 root root      261 5月  20 21:09 case.json
+-rw-r--r-- 1 root root       55 5月  20 21:09 config.json
+-rw-r--r-- 1 root root  3613031 5月  20 21:09 runner.jar
+-rw-r--r-- 1 root root      955 5月  20 21:09 start.sh
+-rw-r--r-- 1 root root 25733961 5月  20 21:09 testApk.apk
+-rw-r--r-- 1 root root 57450051 5月  20 21:09 testBaseApk.apk
+-rw-r--r-- 1 root root  2608702 5月  20 21:09 testCaseApk.apk
+======
+{"self_package":"","run_times":"0","is_plugin":"false"}
+=====
+[2019-05-20 21:09:52][STEP] java -jar runner.jar 214d5c87d330 868689021237244 20190520211007_936223_1 20190520211007_061056_10 true false
+<2019-05-20 21:09:53>:init args
+<2019-05-20 21:09:53>:args ==== [214d5c87d330, 868689021237244, 20190520211007_936223_1, 20190520211007_061056_10, true, true]
+<2019-05-20 21:09:53>:initConfig starttrue
+<2019-05-20 21:09:53>:Start parseing config files
+<2019-05-20 21:09:53>:LabproxyConfigParse case working dir = /home/stf/code/provider/tasks/20190520211007_061056_10/task_result
+<2019-05-20 21:09:53>:lujing/home/stf/code/provider/tasks/20190520211007_061056_10\config.json
+<2019-05-20 21:09:53>:config content = {"self_package":"","run_times":"0","is_plugin":"false"}
+<2019-05-20 21:09:53>:lab parse config.json
+<2019-05-20 21:09:53>:local lab config {"run_times":"0","is_plugin":"false","self_package":""}
+<2019-05-20 21:09:53>:LabproxyResParse case working dir = /home/stf/code/provider/tasks/20190520211007_061056_10/task_result
+<2019-05-20 21:09:53>:apkname=[{"name":"testBaseApk.apk"},{"name":"testApk.apk"},{"name":"testCaseApk.apk"}]
+<2019-05-20 21:09:53>:get base name
+<2019-05-20 21:09:53>:this apk path is :/home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:53>:apkname=[{"name":"testBaseApk.apk"},{"name":"testApk.apk"},{"name":"testCaseApk.apk"}]
+<2019-05-20 21:09:53>:this apk path is :/home/stf/code/provider/tasks/20190520211007_061056_10/testApk.apk
+<2019-05-20 21:09:53>:apkname=[{"name":"testBaseApk.apk"},{"name":"testApk.apk"},{"name":"testCaseApk.apk"}]
+<2019-05-20 21:09:53>:this apk path is :/home/stf/code/provider/tasks/20190520211007_061056_10/testCaseApk.apk
+<2019-05-20 21:09:53>:LabproxyCaseParse case working dir = /home/stf/code/provider/tasks/20190520211007_061056_10/task_result
+<2019-05-20 21:09:53>:parse lab case.json
+<2019-05-20 21:09:53>:local lab case{"set":"smoke.function","cases":[{"owner":"林立星","note":"冒烟case，启动后随便播放视频","method":"com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001","enable":"true"}],"enable":"true"}
+<2019-05-20 21:09:53>:start smoke test
+<2019-05-20 21:09:53>:onoff true
+<2019-05-20 21:09:53>:cases array length = 1
+<2019-05-20 21:09:53>:init case result
+<2019-05-20 21:09:53>:cm running list length = 1
+<2019-05-20 21:09:53>:Start getting apkInfo
+<2019-05-20 21:09:53>:Labproxy don't need download apk
+<2019-05-20 21:09:53>:LabproxyAaptOperation
+<2019-05-20 21:09:53>:Labproxy is getting the version
+<2019-05-20 21:09:53>:get apk version 
+<2019-05-20 21:09:53>:存在：/home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:53>:cmd = aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:53>:command is aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:53>:start_time is  aapt dump badging ——1558358393367——600000
+<2019-05-20 21:09:53>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:53>:now_time is  aapt dump badging ——1558357793367
+<2019-05-20 21:09:54>:the normal log is： aapt dump badging ——package: name='com.qiyi.video' versionCode='81290' versionName='10.5.5' platformBuildVersionName=''
+sdkVersion:'14'
+targetSdkVersion:'26'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='com.android.launcher.permission.INSTALL_SHORTCUT'
+uses-permission: name='com.android.launcher.permission.UNINSTALL_SHORTCUT'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='android.permission.CHANGE_NETWORK_STATE'
+uses-permission: name='android.permission.CHANGE_WIFI_STATE'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'
+uses-permission: name='android.permission.ACCESS_FINE_LOCATION'
+uses-permission: name='android.permission.ACCESS_COARSE_LOCATION'
+uses-permission: name='android.permission.BLUETOOTH_ADMIN'
+uses-permission: name='android.permission.READ_PHONE_STATE'
+uses-permission: name='android.permission.GET_TASKS'
+uses-permission: name='android.permission.CHANGE_WIFI_MULTICAST_STATE'
+uses-permission: name='android.permission.REORDER_TASKS'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.RECEIVE_BOOT_COMPLETED'
+uses-permission: name='android.permission.WRITE_SETTINGS'
+uses-permission: name='android.permission.VIBRATE'
+uses-permission: name='android.permission.DISABLE_KEYGUARD'
+uses-permission: name='com.xiaomi.permission.AUTH_SERVICE'
+uses-permission: name='com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE'
+uses-permission: name='android.permission.CAMERA'
+uses-permission: name='android.permission.MANAGE_ACCOUNTS'
+uses-permission: name='android.permission.GET_ACCOUNTS'
+uses-permission: name='android.permission.AUTHENTICATE_ACCOUNTS'
+uses-permission: name='android.permission.READ_CONTACTS'
+uses-permission: name='android.permission.BLUETOOTH'
+uses-permission: name='android.permission.CHANGE_CONFIGURATION'
+uses-permission: name='android.permission.MODIFY_AUDIO_SETTINGS'
+uses-permission: name='com.google.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.bbk.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.meizu.flyme.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher2.permission.READ_SETTINGS'
+uses-permission: name='android.permission.READ_CALENDAR'
+uses-permission: name='android.permission.WRITE_CALENDAR'
+uses-permission: name='com.qiyi.video.permission.MIPUSH_RECEIVE'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.USE_FINGERPRINT'
+uses-permission: name='android.permission.USE_BIOMETRIC'
+uses-permission: name='org.fidoalliance.uaf.permissions.FIDO_CLIENT'
+uses-permission: name='com.android.vending.BILLING'
+uses-permission: name='android.permission.CALL_PHONE'
+uses-permission: name='android.permission.MOUNT_UNMOUNT_FILESYSTEMS'
+uses-permission: name='com.qti.permission.PROFILER'
+application-label:'ç±å¥èº'
+application-label-en:'iQIYI'
+application-label-zh:'ç±å¥èº'
+application-label-zh-CN:'ç±å¥èº'
+application-label-zh-HK:'ç±å¥èº'
+application-label-zh-MO:'ç±å¥èº'
+application-label-zh-TW:'æå¥è'
+application-icon-120:'r/aa/qiyi_icon.png'
+application-icon-160:'r/t/qiyi_icon.png'
+application-icon-240:'r/e/qiyi_icon.png'
+application-icon-320:'r/w/qiyi_icon.png'
+application-icon-480:'r/ah/qiyi_icon.png'
+application-icon-640:'r/ai/qiyi_icon.png'
+application-icon-65534:'r/t/qiyi_icon.png'
+application-icon-65535:'r/ai/qiyi_icon.png'
+application: label='ç±å¥èº' icon='r/t/qiyi_icon.png'
+application-debuggable
+uses-library-not-required:'org.apache.http.legacy'
+launchable-activity: name='com.qiyi.video.WelcomeActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x20000'
+  uses-feature: name='android.hardware.camera'
+  uses-feature: name='android.hardware.camera.autofocus'
+  uses-feature-not-required: name='android.hardware.camera.flash'
+  uses-feature-not-required: name='android.hardware.camera.front'
+  uses-feature-not-required: name='android.hardware.sensor.accelerometer'
+  uses-feature-not-required: name='android.hardware.sensor.gyroscope'
+  uses-feature-not-required: name='android.hardware.touchscreen'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch.distinct'
+  uses-feature-not-required: name='android.hardware.vr.high_performance'
+  uses-feature-not-required: name='android.software.vr.mode'
+  uses-feature: name='android.hardware.bluetooth'
+  uses-implied-feature: name='android.hardware.bluetooth' reason='requested android.permission.BLUETOOTH permission, requested android.permission.BLUETOOTH_ADMIN permission, and targetSdkVersion > 4'
+  uses-feature: name='android.hardware.location'
+  uses-implied-feature: name='android.hardware.location' reason='requested android.permission.ACCESS_COARSE_LOCATION permission, and requested android.permission.ACCESS_FINE_LOCATION permission'
+  uses-feature: name='android.hardware.microphone'
+  uses-implied-feature: name='android.hardware.microphone' reason='requested android.permission.RECORD_AUDIO permission'
+  uses-feature: name='android.hardware.screen.landscape'
+  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'
+  uses-feature: name='android.hardware.screen.portrait'
+  uses-implied-feature: name='android.hardware.screen.portrait' reason='one or more activities have specified a portrait orientation'
+  uses-feature: name='android.hardware.telephony'
+  uses-implied-feature: name='android.hardware.telephony' reason='requested a telephony permission'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission, requested android.permission.CHANGE_WIFI_MULTICAST_STATE permission, and requested android.permission.CHANGE_WIFI_STATE permission'
+main
+other-activities
+other-receivers
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'en' 'zh' 'zh-CN' 'zh-HK' 'zh-MO' 'zh-TW'
+densities: '120' '160' '240' '320' '480' '640' '65534' '65535'
+native-code: 'armeabi'
+
+<2019-05-20 21:09:54>:the error log is： aapt dump badging ——
+<2019-05-20 21:09:54>:BaseApk version is 10.5.5
+<2019-05-20 21:09:54>:now_time is  aapt dump badging ——1558357794375
+<2019-05-20 21:09:54>:the status id  aapt dump badging ——0
+<2019-05-20 21:09:54>:LabproxyAaptOperation
+<2019-05-20 21:09:54>:Labproxy is getting the packageName
+<2019-05-20 21:09:54>:command is aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:54>:start_time is  aapt dump badging ——1558358394376——600000
+<2019-05-20 21:09:54>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testBaseApk.apk
+<2019-05-20 21:09:54>:now_time is  aapt dump badging ——1558357794376
+<2019-05-20 21:09:55>:the normal log is： aapt dump badging ——package: name='com.qiyi.video' versionCode='81290' versionName='10.5.5' platformBuildVersionName=''
+sdkVersion:'14'
+targetSdkVersion:'26'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='com.android.launcher.permission.INSTALL_SHORTCUT'
+uses-permission: name='com.android.launcher.permission.UNINSTALL_SHORTCUT'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='android.permission.CHANGE_NETWORK_STATE'
+uses-permission: name='android.permission.CHANGE_WIFI_STATE'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'
+uses-permission: name='android.permission.ACCESS_FINE_LOCATION'
+uses-permission: name='android.permission.ACCESS_COARSE_LOCATION'
+uses-permission: name='android.permission.BLUETOOTH_ADMIN'
+uses-permission: name='android.permission.READ_PHONE_STATE'
+uses-permission: name='android.permission.GET_TASKS'
+uses-permission: name='android.permission.CHANGE_WIFI_MULTICAST_STATE'
+uses-permission: name='android.permission.REORDER_TASKS'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.RECEIVE_BOOT_COMPLETED'
+uses-permission: name='android.permission.WRITE_SETTINGS'
+uses-permission: name='android.permission.VIBRATE'
+uses-permission: name='android.permission.DISABLE_KEYGUARD'
+uses-permission: name='com.xiaomi.permission.AUTH_SERVICE'
+uses-permission: name='com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE'
+uses-permission: name='android.permission.CAMERA'
+uses-permission: name='android.permission.MANAGE_ACCOUNTS'
+uses-permission: name='android.permission.GET_ACCOUNTS'
+uses-permission: name='android.permission.AUTHENTICATE_ACCOUNTS'
+uses-permission: name='android.permission.READ_CONTACTS'
+uses-permission: name='android.permission.BLUETOOTH'
+uses-permission: name='android.permission.CHANGE_CONFIGURATION'
+uses-permission: name='android.permission.MODIFY_AUDIO_SETTINGS'
+uses-permission: name='com.google.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.bbk.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.meizu.flyme.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher2.permission.READ_SETTINGS'
+uses-permission: name='android.permission.READ_CALENDAR'
+uses-permission: name='android.permission.WRITE_CALENDAR'
+uses-permission: name='com.qiyi.video.permission.MIPUSH_RECEIVE'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.USE_FINGERPRINT'
+uses-permission: name='android.permission.USE_BIOMETRIC'
+uses-permission: name='org.fidoalliance.uaf.permissions.FIDO_CLIENT'
+uses-permission: name='com.android.vending.BILLING'
+uses-permission: name='android.permission.CALL_PHONE'
+uses-permission: name='android.permission.MOUNT_UNMOUNT_FILESYSTEMS'
+uses-permission: name='com.qti.permission.PROFILER'
+application-label:'ç±å¥èº'
+application-label-en:'iQIYI'
+application-label-zh:'ç±å¥èº'
+application-label-zh-CN:'ç±å¥èº'
+application-label-zh-HK:'ç±å¥èº'
+application-label-zh-MO:'ç±å¥èº'
+application-label-zh-TW:'æå¥è'
+application-icon-120:'r/aa/qiyi_icon.png'
+application-icon-160:'r/t/qiyi_icon.png'
+application-icon-240:'r/e/qiyi_icon.png'
+application-icon-320:'r/w/qiyi_icon.png'
+application-icon-480:'r/ah/qiyi_icon.png'
+application-icon-640:'r/ai/qiyi_icon.png'
+application-icon-65534:'r/t/qiyi_icon.png'
+application-icon-65535:'r/ai/qiyi_icon.png'
+application: label='ç±å¥èº' icon='r/t/qiyi_icon.png'
+application-debuggable
+uses-library-not-required:'org.apache.http.legacy'
+launchable-activity: name='com.qiyi.video.WelcomeActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x20000'
+  uses-feature: name='android.hardware.camera'
+  uses-feature: name='android.hardware.camera.autofocus'
+  uses-feature-not-required: name='android.hardware.camera.flash'
+  uses-feature-not-required: name='android.hardware.camera.front'
+  uses-feature-not-required: name='android.hardware.sensor.accelerometer'
+  uses-feature-not-required: name='android.hardware.sensor.gyroscope'
+  uses-feature-not-required: name='android.hardware.touchscreen'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch.distinct'
+  uses-feature-not-required: name='android.hardware.vr.high_performance'
+  uses-feature-not-required: name='android.software.vr.mode'
+  uses-feature: name='android.hardware.bluetooth'
+  uses-implied-feature: name='android.hardware.bluetooth' reason='requested android.permission.BLUETOOTH permission, requested android.permission.BLUETOOTH_ADMIN permission, and targetSdkVersion > 4'
+  uses-feature: name='android.hardware.location'
+  uses-implied-feature: name='android.hardware.location' reason='requested android.permission.ACCESS_COARSE_LOCATION permission, and requested android.permission.ACCESS_FINE_LOCATION permission'
+  uses-feature: name='android.hardware.microphone'
+  uses-implied-feature: name='android.hardware.microphone' reason='requested android.permission.RECORD_AUDIO permission'
+  uses-feature: name='android.hardware.screen.landscape'
+  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'
+  uses-feature: name='android.hardware.screen.portrait'
+  uses-implied-feature: name='android.hardware.screen.portrait' reason='one or more activities have specified a portrait orientation'
+  uses-feature: name='android.hardware.telephony'
+  uses-implied-feature: name='android.hardware.telephony' reason='requested a telephony permission'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission, requested android.permission.CHANGE_WIFI_MULTICAST_STATE permission, and requested android.permission.CHANGE_WIFI_STATE permission'
+main
+other-activities
+other-receivers
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'en' 'zh' 'zh-CN' 'zh-HK' 'zh-MO' 'zh-TW'
+densities: '120' '160' '240' '320' '480' '640' '65534' '65535'
+native-code: 'armeabi'
+
+<2019-05-20 21:09:55>:the error log is： aapt dump badging ——
+<2019-05-20 21:09:55>:BasePkgName is com.qiyi.video
+<2019-05-20 21:09:55>:now_time is  aapt dump badging ——1558357795382
+<2019-05-20 21:09:55>:the status id  aapt dump badging ——0
+<2019-05-20 21:09:55>:command is aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testApk.apk
+<2019-05-20 21:09:55>:start_time is  aapt dump badging ——1558358395382——600000
+<2019-05-20 21:09:55>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testApk.apk
+<2019-05-20 21:09:55>:now_time is  aapt dump badging ——1558357795382
+<2019-05-20 21:09:56>:the normal log is： aapt dump badging ——package: name='com.qiyi.baselinetest' versionCode='1' versionName='1.0' platformBuildVersionName=''
+sdkVersion:'18'
+targetSdkVersion:'26'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+application-label:'Baselinetest'
+application-label-af:'Baselinetest'
+application-label-am:'Baselinetest'
+application-label-ar:'Baselinetest'
+application-label-az:'Baselinetest'
+application-label-be:'Baselinetest'
+application-label-bg:'Baselinetest'
+application-label-bn:'Baselinetest'
+application-label-bs:'Baselinetest'
+application-label-ca:'Baselinetest'
+application-label-cs:'Baselinetest'
+application-label-da:'Baselinetest'
+application-label-de:'Baselinetest'
+application-label-el:'Baselinetest'
+application-label-en-AU:'Baselinetest'
+application-label-en-GB:'Baselinetest'
+application-label-en-IN:'Baselinetest'
+application-label-es:'Baselinetest'
+application-label-es-US:'Baselinetest'
+application-label-et:'Baselinetest'
+application-label-eu:'Baselinetest'
+application-label-fa:'Baselinetest'
+application-label-fi:'Baselinetest'
+application-label-fr:'Baselinetest'
+application-label-fr-CA:'Baselinetest'
+application-label-gl:'Baselinetest'
+application-label-gu:'Baselinetest'
+application-label-hi:'Baselinetest'
+application-label-hr:'Baselinetest'
+application-label-hu:'Baselinetest'
+application-label-hy:'Baselinetest'
+application-label-in:'Baselinetest'
+application-label-is:'Baselinetest'
+application-label-it:'Baselinetest'
+application-label-iw:'Baselinetest'
+application-label-ja:'Baselinetest'
+application-label-ka:'Baselinetest'
+application-label-kk:'Baselinetest'
+application-label-km:'Baselinetest'
+application-label-kn:'Baselinetest'
+application-label-ko:'Baselinetest'
+application-label-ky:'Baselinetest'
+application-label-lo:'Baselinetest'
+application-label-lt:'Baselinetest'
+application-label-lv:'Baselinetest'
+application-label-mk:'Baselinetest'
+application-label-ml:'Baselinetest'
+application-label-mn:'Baselinetest'
+application-label-mr:'Baselinetest'
+application-label-ms:'Baselinetest'
+application-label-my:'Baselinetest'
+application-label-nb:'Baselinetest'
+application-label-ne:'Baselinetest'
+application-label-nl:'Baselinetest'
+application-label-pa:'Baselinetest'
+application-label-pl:'Baselinetest'
+application-label-pt:'Baselinetest'
+application-label-pt-BR:'Baselinetest'
+application-label-pt-PT:'Baselinetest'
+application-label-ro:'Baselinetest'
+application-label-ru:'Baselinetest'
+application-label-si:'Baselinetest'
+application-label-sk:'Baselinetest'
+application-label-sl:'Baselinetest'
+application-label-sq:'Baselinetest'
+application-label-sr:'Baselinetest'
+application-label-sr-Latn:'Baselinetest'
+application-label-sv:'Baselinetest'
+application-label-sw:'Baselinetest'
+application-label-ta:'Baselinetest'
+application-label-te:'Baselinetest'
+application-label-th:'Baselinetest'
+application-label-tl:'Baselinetest'
+application-label-tr:'Baselinetest'
+application-label-uk:'Baselinetest'
+application-label-ur:'Baselinetest'
+application-label-uz:'Baselinetest'
+application-label-vi:'Baselinetest'
+application-label-zh-CN:'Baselinetest'
+application-label-zh-HK:'Baselinetest'
+application-label-zh-TW:'Baselinetest'
+application-label-zu:'Baselinetest'
+application-icon-120:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-160:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-240:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-320:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-480:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-640:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-65534:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application: label='Baselinetest' icon='res/mipmap-anydpi-v26/ic_launcher.xml'
+application-debuggable
+launchable-activity: name='com.qiyi.baselinetest.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-GB' 'en-IN' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '120' '160' '240' '320' '480' '640' '65534'
+native-code: 'armeabi' 'armeabi-v7a' 'mips' 'x86'
+
+<2019-05-20 21:09:56>:the error log is： aapt dump badging ——
+<2019-05-20 21:09:56>:TestPkgName is com.qiyi.baselinetest
+<2019-05-20 21:09:56>:now_time is  aapt dump badging ——1558357796387
+<2019-05-20 21:09:56>:the status id  aapt dump badging ——0
+<2019-05-20 21:09:56>:command is aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testCaseApk.apk
+<2019-05-20 21:09:56>:start_time is  aapt dump badging ——1558358396388——600000
+<2019-05-20 21:09:56>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190520211007_061056_10/testCaseApk.apk
+<2019-05-20 21:09:56>:now_time is  aapt dump badging ——1558357796388
+<2019-05-20 21:09:57>:the normal log is： aapt dump badging ——package: name='com.qiyi.baselinetest.test' versionCode='' versionName='' platformBuildVersionName=''
+sdkVersion:'18'
+targetSdkVersion:'26'
+application: label='' icon=''
+application-debuggable
+uses-library:'android.test.runner'
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-GB' 'en-IN' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+
+<2019-05-20 21:09:57>:the error log is： aapt dump badging ——
+<2019-05-20 21:09:57>:TestCasePkgName is com.qiyi.baselinetest.test
+<2019-05-20 21:09:57>:now_time is  aapt dump badging ——1558357797390
+<2019-05-20 21:09:57>:the status id  aapt dump badging ——0
+<2019-05-20 21:09:57>:Lab start install
+<2019-05-20 21:09:57>:install apk names = [testCaseApk.apk, testBaseApk.apk, testApk.apk]
+<2019-05-20 21:09:57>:apki 214d5c87d330 testCaseApk.apk 0
+<2019-05-20 21:09:57>:command is apki 214d5c87d330 testCaseApk.apk 0
+<2019-05-20 21:09:57>:start_time is  apki ——1558358397393——600000
+<2019-05-20 21:09:57>:start run cmd  apki ——apki 214d5c87d330 testCaseApk.apk 0
+<2019-05-20 21:09:57>:now_time is  apki ——1558357797393
+<2019-05-20 21:10:16>:the normal log is： apki ——[21:09:57 GMT+8][START] start installation: 214d5c87d330,testCaseApk.apk,0
+====== Network Detect - Start ======
+PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=28.0 ms
+64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=25.1 ms
+64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=125 ms
+64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=123 ms
+64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=25.0 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 25.010/65.583/125.890/48.409 ms
+
+====== Network Detect - End ======
+====== Airplane Mode - Start ======
+mAirplaneModeOn false
+====== Airplane Mode - End ======
+====== Screen Lock - Start ======
+    mStatusBar=Window{b02eca4 u0 StatusBar} isStatusBarKeyguard=false
+    mShowingLockscreen=false mShowingDream=false mDreamingLockscreen=false mDreamingSleepToken=null
+====== Screen Lock - End ======
+Get AI Type: {"error":0,"msg":"OK","type":1}
+Task ID: 20190520211007_061056_10
+Device Status: { screenLock: 0, pingLoss: 0, flightMode: 0 }
+[STDOUT] [21:10:02 GMT+8][START] start installation: 214d5c87d330,testCaseApk.apk,0,18728
+
+[STDOUT] package name: com.qiyi.baselinetest.test
+
+[STDOUT] [21:10:04 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm uninstall com.qiyi.baselinetest.test"
+
+[STDOUT] [21:10:04 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:04 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "rm -rf /data/local/tmp/apk"
+
+[STDOUT] [21:10:04 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:04 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "mkdir /data/local/tmp/apk"
+
+[STDOUT] [21:10:04 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:04 GMT+8][EXEC-CMD] adb -s 214d5c87d330 push testCaseApk.apk /data/local/tmp/apk
+
+[STDOUT] [21:10:04 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDOUT] [  2%] /data/local/tmp/apk/testCaseApk.apk
+[  5%] /data/local/tmp/apk/testCaseApk.apk
+[  7%] /data/local/tmp/apk/testCaseApk.apk
+[ 10%] /data/local/tmp/apk/testCaseApk.apk
+[ 12%] /data/local/tmp/apk/testCaseApk.apk
+[ 15%] /data/local/tmp/apk/testCaseApk.apk
+[ 17%] /data/local/tmp/apk/testCaseApk.apk
+[ 20%] /data/local/tmp/apk/testCaseApk.apk
+[ 22%] /data/local/tmp/apk/testCaseApk.apk
+[ 25%] /data/local/tmp/apk/testCaseApk.apk
+[ 27%] /data/local/tmp/apk/testCaseApk.apk
+[ 30%] /data/local/tmp/apk/testCaseApk.apk
+[ 32%] /data/local/tmp/apk/testCaseApk.apk
+[ 35%] /data/local/tmp/apk/testCaseApk.apk
+[ 37%] /data/local/tmp/apk/testCaseApk.apk
+[ 40%] /data/local/tmp/apk/testCaseApk.apk
+[ 42%] /data/local/tmp/apk/testCaseApk.apk
+[ 45%] /data/local/tmp/apk/testCaseApk.apk
+[ 47%] /data/local/tmp/apk/testCaseApk.apk
+[ 50%] /data/local/tmp/apk/testCaseApk.apk
+[ 52%] /data/local/tmp/apk/testCaseApk.apk
+[ 55%] /data/local/tmp/apk/testCaseApk.apk
+[ 57%] /data/local/tmp/apk/testCaseApk.apk
+[ 60%] /data/local/tmp/apk/testCaseApk.apk
+[ 62%] /data/local/tmp/apk/testCaseApk.apk
+[ 65%] /data/local/tmp/apk/testCaseApk.apk
+[ 67%] /data/local/tmp/apk/testCaseApk.apk
+[ 70%] /data/local/tmp/apk/testCaseApk.apk
+[ 72%] /data/local/tmp/apk/testCaseApk.apk
+[ 75%] /data/local/tmp/apk/testCaseApk.apk
+[ 77%] /data/local/tmp/apk/testCaseApk.apk
+[ 80%] /data/local/tmp/apk/testCaseApk.apk
+[ 82%] /data/local/tmp/apk/testCaseApk.apk
+[ 85%] /data/local/tmp/apk/testCaseApk.apk
+[ 87%] /data/local/tmp/apk/testCaseApk.apk
+[ 90%] /data/local/tmp/apk/testCaseApk.apk
+[ 92%] /data/local/tmp/apk/testCaseApk.apk
+[ 95%] /data/local/tmp/apk/testCaseApk.apk
+[ 97%] /data/local/tmp/apk/testCaseApk.apk
+[100%] /data/local/tmp/apk/testCaseApk.apk
+testCaseApk.apk: 1 file pushed. 18.2 MB/s (2608702 bytes in 0.137s)
+
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:04 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "ls -l /data/local/tmp/apk"
+
+[STDOUT] [21:10:04 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDOUT] total 5096
+-rw-rw-rw- 1 shell shell 2608702 2019-05-20 21:09 testCaseApk.apk
+
+
+[STDOUT] [21:10:04 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:05 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings put secure accessibility_enabled 1"
+
+[STDOUT] [21:10:05 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:05 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:05 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:06 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings put secure enabled_accessibility_services jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService"
+
+[STDOUT] [21:10:06 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:06 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:06 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:08 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings get secure accessibility_enabled && settings get secure enabled_accessibility_services"
+
+[STDOUT] [21:10:08 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDOUT] 1
+jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService
+
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:13 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm install -r /data/local/tmp/apk/testCaseApk.apk"
+
+[STDOUT] [21:10:13 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:13 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:10:13 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:14 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm list package com.qiyi.baselinetest.test"
+
+[STDOUT] [21:10:14 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:14 GMT+8][EXEC-STDOUT] package:com.qiyi.baselinetest.test
+
+
+[STDOUT] [21:10:14 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:15 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm path com.qiyi.baselinetest.test"
+
+[STDOUT] [21:10:15 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:15 GMT+8][EXEC-STDOUT] package:/data/app/com.qiyi.baselinetest.test-1/base.apk
+
+
+[STDOUT] [21:10:15 GMT+8][EXEC-STDERR] 
+
+Package Path: package:/data/app/com.qiyi.baselinetest.test-1/base.apk
+
+Finish AI-Task URL: http://10.13.43.215/matlab/query/inner/misc/proxy.php?method=finishAITask&id=18728&result=1&apkname=&hcurl=
+Finish AI-Task: {"error":0,"msg":"OK","id":{"id":"18728","hcurl":"","apkname":"","result":"1","ctime":"2019-05-20 21:11:07"}}
+
+<2019-05-20 21:10:16>:the error log is： apki ——
+<2019-05-20 21:10:16>:now_time is  apki ——1558357816092
+<2019-05-20 21:10:16>:the status id  apki ——0
+<2019-05-20 21:10:16>:apki 214d5c87d330 testBaseApk.apk 0
+<2019-05-20 21:10:16>:command is apki 214d5c87d330 testBaseApk.apk 0
+<2019-05-20 21:10:16>:start_time is  apki ——1558358416093——600000
+<2019-05-20 21:10:16>:start run cmd  apki ——apki 214d5c87d330 testBaseApk.apk 0
+<2019-05-20 21:10:16>:now_time is  apki ——1558357816093
+<2019-05-20 21:11:09>:the normal log is： apki ——[21:10:16 GMT+8][START] start installation: 214d5c87d330,testBaseApk.apk,0
+====== Network Detect - Start ======
+PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=43.7 ms
+64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=86.0 ms
+64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=116 ms
+64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=66.9 ms
+64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=34.3 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4002ms
+rtt min/avg/max/mdev = 34.388/69.569/116.709/29.675 ms
+
+====== Network Detect - End ======
+====== Airplane Mode - Start ======
+mAirplaneModeOn false
+====== Airplane Mode - End ======
+====== Screen Lock - Start ======
+    mStatusBar=Window{b02eca4 u0 StatusBar} isStatusBarKeyguard=false
+    mShowingLockscreen=false mShowingDream=false mDreamingLockscreen=false mDreamingSleepToken=null
+====== Screen Lock - End ======
+Get AI Type: {"error":0,"msg":"OK","type":1}
+Task ID: 20190520211007_061056_10
+Device Status: { screenLock: 0, pingLoss: 0, flightMode: 0 }
+[STDOUT] [21:10:21 GMT+8][START] start installation: 214d5c87d330,testBaseApk.apk,0,18733
+
+[STDOUT] package name: com.qiyi.video
+
+[STDOUT] [21:10:23 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm uninstall com.qiyi.video"
+
+[STDOUT] [21:10:23 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:23 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:10:23 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:23 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "rm -rf /data/local/tmp/apk"
+
+[STDOUT] [21:10:23 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:23 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:23 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:23 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "mkdir /data/local/tmp/apk"
+
+[STDOUT] [21:10:23 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:23 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:23 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:27 GMT+8][EXEC-CMD] adb -s 214d5c87d330 push testBaseApk.apk /data/local/tmp/apk
+
+[STDOUT] [21:10:27 GMT+8][EXEC-ERROR] null
+[21:10:27 GMT+8][EXEC-STDOUT] [  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  0%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  1%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  2%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  3%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  4%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  5%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  6%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  7%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  8%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[  9%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 10%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 11%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 12%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 13%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 14%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 15%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 16%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 17%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 18%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 19%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 20%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 21%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 22%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 23%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 24%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 25%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 26%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 27%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 28%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 29%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 30%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 31%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 32%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 33%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 34%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 35%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 36%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 37%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 38%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 39%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 40%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 41%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 42%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 43%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 44%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 45%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 46%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 47%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 48%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 49%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 50%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 51%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 52%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 53%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 54%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 55%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 56%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 57%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 58%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 59%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 60%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 61%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 62%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 63%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 64%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 65%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 66%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 67%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 68%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 69%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 70%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 71%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 72%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 73%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 74%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 75%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 76%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 77%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 78%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 79%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 80%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 81%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 82%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 83%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 84%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 85%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 86%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 87%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 88%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 89%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 90%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 91%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 92%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 93%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 94%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 95%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 96%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 97%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 98%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[ 99%] /data/local/tmp/apk/testBaseApk.apk
+[100%] /data/local/tmp/apk/testBaseApk.apk
+testBaseApk.apk: 1 file pushed. 12.8 MB/s (57450051 bytes in 4.286s)
+
+
+[STDOUT] [21:10:27 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:27 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "ls -l /data/local/tmp/apk"
+
+[STDOUT] [21:10:27 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:27 GMT+8][EXEC-STDOUT] total 112216
+-rw-rw-rw- 1 shell shell 57450051 2019-05-20 21:09 testBaseApk.apk
+
+
+[STDOUT] [21:10:27 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:29 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings put secure accessibility_enabled 1"
+
+[STDOUT] [21:10:29 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:29 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:29 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:30 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings put secure enabled_accessibility_services jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService"
+
+[STDOUT] [21:10:30 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:30 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:30 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:32 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings get secure accessibility_enabled && settings get secure enabled_accessibility_services"
+
+[STDOUT] [21:10:32 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:32 GMT+8][EXEC-STDOUT] 1
+jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService
+
+
+[STDOUT] [21:10:32 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:05 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm install -r /data/local/tmp/apk/testBaseApk.apk"
+
+[STDOUT] [21:11:05 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:05 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:11:05 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:06 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm list package com.qiyi.video"
+
+[STDOUT] [21:11:06 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:06 GMT+8][EXEC-STDOUT] package:com.qiyi.video
+package:com.qiyi.video.child
+
+
+[STDOUT] [21:11:06 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:08 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm path com.qiyi.video"
+
+[STDOUT] [21:11:08 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:08 GMT+8][EXEC-STDOUT] package:/data/app/com.qiyi.video-1/base.apk
+
+
+[STDOUT] [21:11:08 GMT+8][EXEC-STDERR] 
+
+Package Path: package:/data/app/com.qiyi.video-1/base.apk
+
+Finish AI-Task URL: http://10.13.43.215/matlab/query/inner/misc/proxy.php?method=finishAITask&id=18733&result=1&apkname=&hcurl=
+Finish AI-Task: {"error":0,"msg":"OK","id":{"id":"18733","hcurl":"","apkname":"","result":"1","ctime":"2019-05-20 21:12:01"}}
+
+<2019-05-20 21:11:09>:the error log is： apki ——
+<2019-05-20 21:11:09>:now_time is  apki ——1558357869616
+<2019-05-20 21:11:09>:the status id  apki ——0
+<2019-05-20 21:11:09>:testBaseApk.apk install succeed
+<2019-05-20 21:11:09>:apki 214d5c87d330 testApk.apk 0
+<2019-05-20 21:11:09>:command is apki 214d5c87d330 testApk.apk 0
+<2019-05-20 21:11:09>:start_time is  apki ——1558358469617——600000
+<2019-05-20 21:11:09>:start run cmd  apki ——apki 214d5c87d330 testApk.apk 0
+<2019-05-20 21:11:09>:now_time is  apki ——1558357869617
+<2019-05-20 21:11:35>:the normal log is： apki ——[21:11:09 GMT+8][START] start installation: 214d5c87d330,testApk.apk,0
+====== Network Detect - Start ======
+PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=19.0 ms
+64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=25.5 ms
+64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=59.0 ms
+64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=32.8 ms
+64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=30.8 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 19.068/33.472/59.045/13.652 ms
+
+====== Network Detect - End ======
+====== Airplane Mode - Start ======
+mAirplaneModeOn false
+====== Airplane Mode - End ======
+====== Screen Lock - Start ======
+    mStatusBar=Window{b02eca4 u0 StatusBar} isStatusBarKeyguard=false
+    mShowingLockscreen=false mShowingDream=false mDreamingLockscreen=false mDreamingSleepToken=null
+====== Screen Lock - End ======
+Get AI Type: {"error":0,"msg":"OK","type":1}
+Task ID: 20190520211007_061056_10
+Device Status: { screenLock: 0, pingLoss: 0, flightMode: 0 }
+[STDOUT] [21:11:15 GMT+8][START] start installation: 214d5c87d330,testApk.apk,0,18737
+
+[STDOUT] package name: com.qiyi.baselinetest
+
+[STDOUT] [21:11:16 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm uninstall com.qiyi.baselinetest"
+
+[STDOUT] [21:11:16 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:16 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:11:16 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:16 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "rm -rf /data/local/tmp/apk"
+
+[STDOUT] [21:11:16 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:16 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:11:16 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:16 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "mkdir /data/local/tmp/apk"
+
+[STDOUT] [21:11:16 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:16 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:11:16 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:18 GMT+8][EXEC-CMD] adb -s 214d5c87d330 push testApk.apk /data/local/tmp/apk
+
+[STDOUT] [21:11:18 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:18 GMT+8][EXEC-STDOUT] [  0%] /data/local/tmp/apk/testApk.apk
+[  0%] /data/local/tmp/apk/testApk.apk
+[  0%] /data/local/tmp/apk/testApk.apk
+[  1%] /data/local/tmp/apk/testApk.apk
+[  1%] /data/local/tmp/apk/testApk.apk
+[  1%] /data/local/tmp/apk/testApk.apk
+[  1%] /data/local/tmp/apk/testApk.apk
+[  2%] /data/local/tmp/apk/testApk.apk
+[  2%] /data/local/tmp/apk/testApk.apk
+[  2%] /data/local/tmp/apk/testApk.apk
+[  2%] /data/local/tmp/apk/testApk.apk
+[  3%] /data/local/tmp/apk/testApk.apk
+[  3%] /data/local/tmp/apk/testApk.apk
+[  3%] /data/local/tmp/apk/testApk.apk
+[  3%] /data/local/tmp/apk/testApk.apk
+[  4%] /data/local/tmp/apk/testApk.apk
+[  4%] /data/local/tmp/apk/testApk.apk
+[  4%] /data/local/tmp/apk/testApk.apk
+[  4%] /data/local/tmp/apk/testApk.apk
+[  5%] /data/local/tmp/apk/testApk.apk
+[  5%] /data/local/tmp/apk/testApk.apk
+[  5%] /data/local/tmp/apk/testApk.apk
+[  5%] /data/local/tmp/apk/testApk.apk
+[  6%] /data/local/tmp/apk/testApk.apk
+[  6%] /data/local/tmp/apk/testApk.apk
+[  6%] /data/local/tmp/apk/testApk.apk
+[  6%] /data/local/tmp/apk/testApk.apk
+[  7%] /data/local/tmp/apk/testApk.apk
+[  7%] /data/local/tmp/apk/testApk.apk
+[  7%] /data/local/tmp/apk/testApk.apk
+[  7%] /data/local/tmp/apk/testApk.apk
+[  8%] /data/local/tmp/apk/testApk.apk
+[  8%] /data/local/tmp/apk/testApk.apk
+[  8%] /data/local/tmp/apk/testApk.apk
+[  8%] /data/local/tmp/apk/testApk.apk
+[  9%] /data/local/tmp/apk/testApk.apk
+[  9%] /data/local/tmp/apk/testApk.apk
+[  9%] /data/local/tmp/apk/testApk.apk
+[  9%] /data/local/tmp/apk/testApk.apk
+[ 10%] /data/local/tmp/apk/testApk.apk
+[ 10%] /data/local/tmp/apk/testApk.apk
+[ 10%] /data/local/tmp/apk/testApk.apk
+[ 10%] /data/local/tmp/apk/testApk.apk
+[ 11%] /data/local/tmp/apk/testApk.apk
+[ 11%] /data/local/tmp/apk/testApk.apk
+[ 11%] /data/local/tmp/apk/testApk.apk
+[ 11%] /data/local/tmp/apk/testApk.apk
+[ 12%] /data/local/tmp/apk/testApk.apk
+[ 12%] /data/local/tmp/apk/testApk.apk
+[ 12%] /data/local/tmp/apk/testApk.apk
+[ 12%] /data/local/tmp/apk/testApk.apk
+[ 13%] /data/local/tmp/apk/testApk.apk
+[ 13%] /data/local/tmp/apk/testApk.apk
+[ 13%] /data/local/tmp/apk/testApk.apk
+[ 14%] /data/local/tmp/apk/testApk.apk
+[ 14%] /data/local/tmp/apk/testApk.apk
+[ 14%] /data/local/tmp/apk/testApk.apk
+[ 14%] /data/local/tmp/apk/testApk.apk
+[ 15%] /data/local/tmp/apk/testApk.apk
+[ 15%] /data/local/tmp/apk/testApk.apk
+[ 15%] /data/local/tmp/apk/testApk.apk
+[ 15%] /data/local/tmp/apk/testApk.apk
+[ 16%] /data/local/tmp/apk/testApk.apk
+[ 16%] /data/local/tmp/apk/testApk.apk
+[ 16%] /data/local/tmp/apk/testApk.apk
+[ 16%] /data/local/tmp/apk/testApk.apk
+[ 17%] /data/local/tmp/apk/testApk.apk
+[ 17%] /data/local/tmp/apk/testApk.apk
+[ 17%] /data/local/tmp/apk/testApk.apk
+[ 17%] /data/local/tmp/apk/testApk.apk
+[ 18%] /data/local/tmp/apk/testApk.apk
+[ 18%] /data/local/tmp/apk/testApk.apk
+[ 18%] /data/local/tmp/apk/testApk.apk
+[ 18%] /data/local/tmp/apk/testApk.apk
+[ 19%] /data/local/tmp/apk/testApk.apk
+[ 19%] /data/local/tmp/apk/testApk.apk
+[ 19%] /data/local/tmp/apk/testApk.apk
+[ 19%] /data/local/tmp/apk/testApk.apk
+[ 20%] /data/local/tmp/apk/testApk.apk
+[ 20%] /data/local/tmp/apk/testApk.apk
+[ 20%] /data/local/tmp/apk/testApk.apk
+[ 20%] /data/local/tmp/apk/testApk.apk
+[ 21%] /data/local/tmp/apk/testApk.apk
+[ 21%] /data/local/tmp/apk/testApk.apk
+[ 21%] /data/local/tmp/apk/testApk.apk
+[ 21%] /data/local/tmp/apk/testApk.apk
+[ 22%] /data/local/tmp/apk/testApk.apk
+[ 22%] /data/local/tmp/apk/testApk.apk
+[ 22%] /data/local/tmp/apk/testApk.apk
+[ 22%] /data/local/tmp/apk/testApk.apk
+[ 23%] /data/local/tmp/apk/testApk.apk
+[ 23%] /data/local/tmp/apk/testApk.apk
+[ 23%] /data/local/tmp/apk/testApk.apk
+[ 23%] /data/local/tmp/apk/testApk.apk
+[ 24%] /data/local/tmp/apk/testApk.apk
+[ 24%] /data/local/tmp/apk/testApk.apk
+[ 24%] /data/local/tmp/apk/testApk.apk
+[ 24%] /data/local/tmp/apk/testApk.apk
+[ 25%] /data/local/tmp/apk/testApk.apk
+[ 25%] /data/local/tmp/apk/testApk.apk
+[ 25%] /data/local/tmp/apk/testApk.apk
+[ 25%] /data/local/tmp/apk/testApk.apk
+[ 26%] /data/local/tmp/apk/testApk.apk
+[ 26%] /data/local/tmp/apk/testApk.apk
+[ 26%] /data/local/tmp/apk/testApk.apk
+[ 26%] /data/local/tmp/apk/testApk.apk
+[ 27%] /data/local/tmp/apk/testApk.apk
+[ 27%] /data/local/tmp/apk/testApk.apk
+[ 27%] /data/local/tmp/apk/testApk.apk
+[ 28%] /data/local/tmp/apk/testApk.apk
+[ 28%] /data/local/tmp/apk/testApk.apk
+[ 28%] /data/local/tmp/apk/testApk.apk
+[ 28%] /data/local/tmp/apk/testApk.apk
+[ 29%] /data/local/tmp/apk/testApk.apk
+[ 29%] /data/local/tmp/apk/testApk.apk
+[ 29%] /data/local/tmp/apk/testApk.apk
+[ 29%] /data/local/tmp/apk/testApk.apk
+[ 30%] /data/local/tmp/apk/testApk.apk
+[ 30%] /data/local/tmp/apk/testApk.apk
+[ 30%] /data/local/tmp/apk/testApk.apk
+[ 30%] /data/local/tmp/apk/testApk.apk
+[ 31%] /data/local/tmp/apk/testApk.apk
+[ 31%] /data/local/tmp/apk/testApk.apk
+[ 31%] /data/local/tmp/apk/testApk.apk
+[ 31%] /data/local/tmp/apk/testApk.apk
+[ 32%] /data/local/tmp/apk/testApk.apk
+[ 32%] /data/local/tmp/apk/testApk.apk
+[ 32%] /data/local/tmp/apk/testApk.apk
+[ 32%] /data/local/tmp/apk/testApk.apk
+[ 33%] /data/local/tmp/apk/testApk.apk
+[ 33%] /data/local/tmp/apk/testApk.apk
+[ 33%] /data/local/tmp/apk/testApk.apk
+[ 33%] /data/local/tmp/apk/testApk.apk
+[ 34%] /data/local/tmp/apk/testApk.apk
+[ 34%] /data/local/tmp/apk/testApk.apk
+[ 34%] /data/local/tmp/apk/testApk.apk
+[ 34%] /data/local/tmp/apk/testApk.apk
+[ 35%] /data/local/tmp/apk/testApk.apk
+[ 35%] /data/local/tmp/apk/testApk.apk
+[ 35%] /data/local/tmp/apk/testApk.apk
+[ 35%] /data/local/tmp/apk/testApk.apk
+[ 36%] /data/local/tmp/apk/testApk.apk
+[ 36%] /data/local/tmp/apk/testApk.apk
+[ 36%] /data/local/tmp/apk/testApk.apk
+[ 36%] /data/local/tmp/apk/testApk.apk
+[ 37%] /data/local/tmp/apk/testApk.apk
+[ 37%] /data/local/tmp/apk/testApk.apk
+[ 37%] /data/local/tmp/apk/testApk.apk
+[ 37%] /data/local/tmp/apk/testApk.apk
+[ 38%] /data/local/tmp/apk/testApk.apk
+[ 38%] /data/local/tmp/apk/testApk.apk
+[ 38%] /data/local/tmp/apk/testApk.apk
+[ 38%] /data/local/tmp/apk/testApk.apk
+[ 39%] /data/local/tmp/apk/testApk.apk
+[ 39%] /data/local/tmp/apk/testApk.apk
+[ 39%] /data/local/tmp/apk/testApk.apk
+[ 39%] /data/local/tmp/apk/testApk.apk
+[ 40%] /data/local/tmp/apk/testApk.apk
+[ 40%] /data/local/tmp/apk/testApk.apk
+[ 40%] /data/local/tmp/apk/testApk.apk
+[ 41%] /data/local/tmp/apk/testApk.apk
+[ 41%] /data/local/tmp/apk/testApk.apk
+[ 41%] /data/local/tmp/apk/testApk.apk
+[ 41%] /data/local/tmp/apk/testApk.apk
+[ 42%] /data/local/tmp/apk/testApk.apk
+[ 42%] /data/local/tmp/apk/testApk.apk
+[ 42%] /data/local/tmp/apk/testApk.apk
+[ 42%] /data/local/tmp/apk/testApk.apk
+[ 43%] /data/local/tmp/apk/testApk.apk
+[ 43%] /data/local/tmp/apk/testApk.apk
+[ 43%] /data/local/tmp/apk/testApk.apk
+[ 43%] /data/local/tmp/apk/testApk.apk
+[ 44%] /data/local/tmp/apk/testApk.apk
+[ 44%] /data/local/tmp/apk/testApk.apk
+[ 44%] /data/local/tmp/apk/testApk.apk
+[ 44%] /data/local/tmp/apk/testApk.apk
+[ 45%] /data/local/tmp/apk/testApk.apk
+[ 45%] /data/local/tmp/apk/testApk.apk
+[ 45%] /data/local/tmp/apk/testApk.apk
+[ 45%] /data/local/tmp/apk/testApk.apk
+[ 46%] /data/local/tmp/apk/testApk.apk
+[ 46%] /data/local/tmp/apk/testApk.apk
+[ 46%] /data/local/tmp/apk/testApk.apk
+[ 46%] /data/local/tmp/apk/testApk.apk
+[ 47%] /data/local/tmp/apk/testApk.apk
+[ 47%] /data/local/tmp/apk/testApk.apk
+[ 47%] /data/local/tmp/apk/testApk.apk
+[ 47%] /data/local/tmp/apk/testApk.apk
+[ 48%] /data/local/tmp/apk/testApk.apk
+[ 48%] /data/local/tmp/apk/testApk.apk
+[ 48%] /data/local/tmp/apk/testApk.apk
+[ 48%] /data/local/tmp/apk/testApk.apk
+[ 49%] /data/local/tmp/apk/testApk.apk
+[ 49%] /data/local/tmp/apk/testApk.apk
+[ 49%] /data/local/tmp/apk/testApk.apk
+[ 49%] /data/local/tmp/apk/testApk.apk
+[ 50%] /data/local/tmp/apk/testApk.apk
+[ 50%] /data/local/tmp/apk/testApk.apk
+[ 50%] /data/local/tmp/apk/testApk.apk
+[ 50%] /data/local/tmp/apk/testApk.apk
+[ 51%] /data/local/tmp/apk/testApk.apk
+[ 51%] /data/local/tmp/apk/testApk.apk
+[ 51%] /data/local/tmp/apk/testApk.apk
+[ 51%] /data/local/tmp/apk/testApk.apk
+[ 52%] /data/local/tmp/apk/testApk.apk
+[ 52%] /data/local/tmp/apk/testApk.apk
+[ 52%] /data/local/tmp/apk/testApk.apk
+[ 52%] /data/local/tmp/apk/testApk.apk
+[ 53%] /data/local/tmp/apk/testApk.apk
+[ 53%] /data/local/tmp/apk/testApk.apk
+[ 53%] /data/local/tmp/apk/testApk.apk
+[ 53%] /data/local/tmp/apk/testApk.apk
+[ 54%] /data/local/tmp/apk/testApk.apk
+[ 54%] /data/local/tmp/apk/testApk.apk
+[ 54%] /data/local/tmp/apk/testApk.apk
+[ 55%] /data/local/tmp/apk/testApk.apk
+[ 55%] /data/local/tmp/apk/testApk.apk
+[ 55%] /data/local/tmp/apk/testApk.apk
+[ 55%] /data/local/tmp/apk/testApk.apk
+[ 56%] /data/local/tmp/apk/testApk.apk
+[ 56%] /data/local/tmp/apk/testApk.apk
+[ 56%] /data/local/tmp/apk/testApk.apk
+[ 56%] /data/local/tmp/apk/testApk.apk
+[ 57%] /data/local/tmp/apk/testApk.apk
+[ 57%] /data/local/tmp/apk/testApk.apk
+[ 57%] /data/local/tmp/apk/testApk.apk
+[ 57%] /data/local/tmp/apk/testApk.apk
+[ 58%] /data/local/tmp/apk/testApk.apk
+[ 58%] /data/local/tmp/apk/testApk.apk
+[ 58%] /data/local/tmp/apk/testApk.apk
+[ 58%] /data/local/tmp/apk/testApk.apk
+[ 59%] /data/local/tmp/apk/testApk.apk
+[ 59%] /data/local/tmp/apk/testApk.apk
+[ 59%] /data/local/tmp/apk/testApk.apk
+[ 59%] /data/local/tmp/apk/testApk.apk
+[ 60%] /data/local/tmp/apk/testApk.apk
+[ 60%] /data/local/tmp/apk/testApk.apk
+[ 60%] /data/local/tmp/apk/testApk.apk
+[ 60%] /data/local/tmp/apk/testApk.apk
+[ 61%] /data/local/tmp/apk/testApk.apk
+[ 61%] /data/local/tmp/apk/testApk.apk
+[ 61%] /data/local/tmp/apk/testApk.apk
+[ 61%] /data/local/tmp/apk/testApk.apk
+[ 62%] /data/local/tmp/apk/testApk.apk
+[ 62%] /data/local/tmp/apk/testApk.apk
+[ 62%] /data/local/tmp/apk/testApk.apk
+[ 62%] /data/local/tmp/apk/testApk.apk
+[ 63%] /data/local/tmp/apk/testApk.apk
+[ 63%] /data/local/tmp/apk/testApk.apk
+[ 63%] /data/local/tmp/apk/testApk.apk
+[ 63%] /data/local/tmp/apk/testApk.apk
+[ 64%] /data/local/tmp/apk/testApk.apk
+[ 64%] /data/local/tmp/apk/testApk.apk
+[ 64%] /data/local/tmp/apk/testApk.apk
+[ 64%] /data/local/tmp/apk/testApk.apk
+[ 65%] /data/local/tmp/apk/testApk.apk
+[ 65%] /data/local/tmp/apk/testApk.apk
+[ 65%] /data/local/tmp/apk/testApk.apk
+[ 65%] /data/local/tmp/apk/testApk.apk
+[ 66%] /data/local/tmp/apk/testApk.apk
+[ 66%] /data/local/tmp/apk/testApk.apk
+[ 66%] /data/local/tmp/apk/testApk.apk
+[ 66%] /data/local/tmp/apk/testApk.apk
+[ 67%] /data/local/tmp/apk/testApk.apk
+[ 67%] /data/local/tmp/apk/testApk.apk
+[ 67%] /data/local/tmp/apk/testApk.apk
+[ 67%] /data/local/tmp/apk/testApk.apk
+[ 68%] /data/local/tmp/apk/testApk.apk
+[ 68%] /data/local/tmp/apk/testApk.apk
+[ 68%] /data/local/tmp/apk/testApk.apk
+[ 69%] /data/local/tmp/apk/testApk.apk
+[ 69%] /data/local/tmp/apk/testApk.apk
+[ 69%] /data/local/tmp/apk/testApk.apk
+[ 69%] /data/local/tmp/apk/testApk.apk
+[ 70%] /data/local/tmp/apk/testApk.apk
+[ 70%] /data/local/tmp/apk/testApk.apk
+[ 70%] /data/local/tmp/apk/testApk.apk
+[ 70%] /data/local/tmp/apk/testApk.apk
+[ 71%] /data/local/tmp/apk/testApk.apk
+[ 71%] /data/local/tmp/apk/testApk.apk
+[ 71%] /data/local/tmp/apk/testApk.apk
+[ 71%] /data/local/tmp/apk/testApk.apk
+[ 72%] /data/local/tmp/apk/testApk.apk
+[ 72%] /data/local/tmp/apk/testApk.apk
+[ 72%] /data/local/tmp/apk/testApk.apk
+[ 72%] /data/local/tmp/apk/testApk.apk
+[ 73%] /data/local/tmp/apk/testApk.apk
+[ 73%] /data/local/tmp/apk/testApk.apk
+[ 73%] /data/local/tmp/apk/testApk.apk
+[ 73%] /data/local/tmp/apk/testApk.apk
+[ 74%] /data/local/tmp/apk/testApk.apk
+[ 74%] /data/local/tmp/apk/testApk.apk
+[ 74%] /data/local/tmp/apk/testApk.apk
+[ 74%] /data/local/tmp/apk/testApk.apk
+[ 75%] /data/local/tmp/apk/testApk.apk
+[ 75%] /data/local/tmp/apk/testApk.apk
+[ 75%] /data/local/tmp/apk/testApk.apk
+[ 75%] /data/local/tmp/apk/testApk.apk
+[ 76%] /data/local/tmp/apk/testApk.apk
+[ 76%] /data/local/tmp/apk/testApk.apk
+[ 76%] /data/local/tmp/apk/testApk.apk
+[ 76%] /data/local/tmp/apk/testApk.apk
+[ 77%] /data/local/tmp/apk/testApk.apk
+[ 77%] /data/local/tmp/apk/testApk.apk
+[ 77%] /data/local/tmp/apk/testApk.apk
+[ 77%] /data/local/tmp/apk/testApk.apk
+[ 78%] /data/local/tmp/apk/testApk.apk
+[ 78%] /data/local/tmp/apk/testApk.apk
+[ 78%] /data/local/tmp/apk/testApk.apk
+[ 78%] /data/local/tmp/apk/testApk.apk
+[ 79%] /data/local/tmp/apk/testApk.apk
+[ 79%] /data/local/tmp/apk/testApk.apk
+[ 79%] /data/local/tmp/apk/testApk.apk
+[ 79%] /data/local/tmp/apk/testApk.apk
+[ 80%] /data/local/tmp/apk/testApk.apk
+[ 80%] /data/local/tmp/apk/testApk.apk
+[ 80%] /data/local/tmp/apk/testApk.apk
+[ 80%] /data/local/tmp/apk/testApk.apk
+[ 81%] /data/local/tmp/apk/testApk.apk
+[ 81%] /data/local/tmp/apk/testApk.apk
+[ 81%] /data/local/tmp/apk/testApk.apk
+[ 82%] /data/local/tmp/apk/testApk.apk
+[ 82%] /data/local/tmp/apk/testApk.apk
+[ 82%] /data/local/tmp/apk/testApk.apk
+[ 82%] /data/local/tmp/apk/testApk.apk
+[ 83%] /data/local/tmp/apk/testApk.apk
+[ 83%] /data/local/tmp/apk/testApk.apk
+[ 83%] /data/local/tmp/apk/testApk.apk
+[ 83%] /data/local/tmp/apk/testApk.apk
+[ 84%] /data/local/tmp/apk/testApk.apk
+[ 84%] /data/local/tmp/apk/testApk.apk
+[ 84%] /data/local/tmp/apk/testApk.apk
+[ 84%] /data/local/tmp/apk/testApk.apk
+[ 85%] /data/local/tmp/apk/testApk.apk
+[ 85%] /data/local/tmp/apk/testApk.apk
+[ 85%] /data/local/tmp/apk/testApk.apk
+[ 85%] /data/local/tmp/apk/testApk.apk
+[ 86%] /data/local/tmp/apk/testApk.apk
+[ 86%] /data/local/tmp/apk/testApk.apk
+[ 86%] /data/local/tmp/apk/testApk.apk
+[ 86%] /data/local/tmp/apk/testApk.apk
+[ 87%] /data/local/tmp/apk/testApk.apk
+[ 87%] /data/local/tmp/apk/testApk.apk
+[ 87%] /data/local/tmp/apk/testApk.apk
+[ 87%] /data/local/tmp/apk/testApk.apk
+[ 88%] /data/local/tmp/apk/testApk.apk
+[ 88%] /data/local/tmp/apk/testApk.apk
+[ 88%] /data/local/tmp/apk/testApk.apk
+[ 88%] /data/local/tmp/apk/testApk.apk
+[ 89%] /data/local/tmp/apk/testApk.apk
+[ 89%] /data/local/tmp/apk/testApk.apk
+[ 89%] /data/local/tmp/apk/testApk.apk
+[ 89%] /data/local/tmp/apk/testApk.apk
+[ 90%] /data/local/tmp/apk/testApk.apk
+[ 90%] /data/local/tmp/apk/testApk.apk
+[ 90%] /data/local/tmp/apk/testApk.apk
+[ 90%] /data/local/tmp/apk/testApk.apk
+[ 91%] /data/local/tmp/apk/testApk.apk
+[ 91%] /data/local/tmp/apk/testApk.apk
+[ 91%] /data/local/tmp/apk/testApk.apk
+[ 91%] /data/local/tmp/apk/testApk.apk
+[ 92%] /data/local/tmp/apk/testApk.apk
+[ 92%] /data/local/tmp/apk/testApk.apk
+[ 92%] /data/local/tmp/apk/testApk.apk
+[ 92%] /data/local/tmp/apk/testApk.apk
+[ 93%] /data/local/tmp/apk/testApk.apk
+[ 93%] /data/local/tmp/apk/testApk.apk
+[ 93%] /data/local/tmp/apk/testApk.apk
+[ 93%] /data/local/tmp/apk/testApk.apk
+[ 94%] /data/local/tmp/apk/testApk.apk
+[ 94%] /data/local/tmp/apk/testApk.apk
+[ 94%] /data/local/tmp/apk/testApk.apk
+[ 94%] /data/local/tmp/apk/testApk.apk
+[ 95%] /data/local/tmp/apk/testApk.apk
+[ 95%] /data/local/tmp/apk/testApk.apk
+[ 95%] /data/local/tmp/apk/testApk.apk
+[ 96%] /data/local/tmp/apk/testApk.apk
+[ 96%] /data/local/tmp/apk/testApk.apk
+[ 96%] /data/local/tmp/apk/testApk.apk
+[ 96%] /data/local/tmp/apk/testApk.apk
+[ 97%] /data/local/tmp/apk/testApk.apk
+[ 97%] /data/local/tmp/apk/testApk.apk
+[ 97%] /data/local/tmp/apk/testApk.apk
+[ 97%] /data/local/tmp/apk/testApk.apk
+[ 98%] /data/local/tmp/apk/testApk.apk
+[ 98%] /data/local/tmp/apk/testApk.apk
+[ 98%] /data/local/tmp/apk/testApk.apk
+[ 98%] /data/local/tmp/apk/testApk.apk
+[ 99%] /data/local/tmp/apk/testApk.apk
+[ 99%] /data/local/tmp/apk/testApk.apk
+[ 99%] /data/local/tmp/apk/testApk.apk
+[ 99%] /data/local/tmp/apk/testApk.apk
+[100%] /data/local/tmp/apk/testApk.apk
+testApk.apk: 1 file pushed. 20.2 MB/s (25733961 bytes in 1.217s)
+
+
+[STDOUT] [21:11:18 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:18 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "ls -l /data/local/tmp/apk"
+
+[STDOUT] [21:11:18 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:18 GMT+8][EXEC-STDOUT] total 50264
+-rw-rw-rw- 1 shell shell 25733961 2019-05-20 21:09 testApk.apk
+
+
+[STDOUT] [21:11:18 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:19 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings put secure accessibility_enabled 1"
+
+[STDOUT] [21:11:19 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:19 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:11:19 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:20 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings put secure enabled_accessibility_services jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService"
+
+[STDOUT] [21:11:20 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:20 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:11:20 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:24 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "settings get secure accessibility_enabled && settings get secure enabled_accessibility_services"
+
+[STDOUT] [21:11:24 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:24 GMT+8][EXEC-STDOUT] 1
+jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService
+
+
+[STDOUT] [21:11:24 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:30 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm install -r /data/local/tmp/apk/testApk.apk"
+
+[STDOUT] [21:11:30 GMT+8][EXEC-ERROR] null
+[21:11:30 GMT+8][EXEC-STDOUT] Success
+
+[21:11:30 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:31 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm list package com.qiyi.baselinetest"
+
+[STDOUT] [21:11:31 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:31 GMT+8][EXEC-STDOUT] package:com.qiyi.baselinetest.test
+package:com.qiyi.baselinetest
+
+
+[STDOUT] [21:11:31 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:11:34 GMT+8][EXEC-CMD] adb -s 214d5c87d330 shell "pm path com.qiyi.baselinetest"
+
+[STDOUT] [21:11:34 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:11:34 GMT+8][EXEC-STDOUT] package:/data/app/com.qiyi.baselinetest-1/base.apk
+
+
+[STDOUT] [21:11:34 GMT+8][EXEC-STDERR] 
+
+Package Path: package:/data/app/com.qiyi.baselinetest-1/base.apk
+
+Finish AI-Task URL: http://10.13.43.215/matlab/query/inner/misc/proxy.php?method=finishAITask&id=18737&result=1&apkname=&hcurl=
+Finish AI-Task: {"error":0,"msg":"OK","id":{"id":"18737","hcurl":"","apkname":"","result":"1","ctime":"2019-05-20 21:12:26"}}
+
+<2019-05-20 21:11:35>:the error log is： apki ——
+<2019-05-20 21:11:35>:now_time is  apki ——1558357895141
+<2019-05-20 21:11:35>:the status id  apki ——0
+<2019-05-20 21:11:35>:BaseApk LabInstallResult = true
+<2019-05-20 21:11:35>:开始自动化测试
+<2019-05-20 21:11:35>:开始时间:1558357895141
+<2019-05-20 21:11:35>:tims = 1
+<2019-05-20 21:11:35>:写入count值1
+<2019-05-20 21:11:35>:adb -s 214d5c87d330 push /home/stf/code/provider/tasks/20190520211007_061056_10/count.txt data/local/tmp/count.txt
+<2019-05-20 21:11:35>:command is adb -s 214d5c87d330 push /home/stf/code/provider/tasks/20190520211007_061056_10/count.txt data/local/tmp/count.txt
+<2019-05-20 21:11:35>:start_time is  push ——1558358495144——600000
+<2019-05-20 21:11:35>:start run cmd  push ——adb -s 214d5c87d330 push /home/stf/code/provider/tasks/20190520211007_061056_10/count.txt data/local/tmp/count.txt
+<2019-05-20 21:11:35>:now_time is  push ——1558357895144
+<2019-05-20 21:11:36>:the normal log is： push ——[100%] data/local/tmp/count.txt
+/home/stf/code/provider/tasks/20190520211007_061056_10/count.txt: 1 file pushed. 0.0 MB/s (1 bytes in 0.002s)
+
+<2019-05-20 21:11:36>:the error log is： push ——
+<2019-05-20 21:11:36>:now_time is  push ——1558357896146
+<2019-05-20 21:11:36>:the status id  push ——0
+<2019-05-20 21:11:36>:start run testcase
+<2019-05-20 21:11:36>:case num 1
+<2019-05-20 21:11:36>:<214d5c87d330>正在清空:/mnt/sdcard/QA-SHOTS-UIA/screendir/*
+<2019-05-20 21:11:36>:command is adb -s 214d5c87d330 shell rm -rf /mnt/sdcard/QA-SHOTS-UIA/screendir/*
+<2019-05-20 21:11:36>:start_time is  rm -rf ——1558358496151——600000
+<2019-05-20 21:11:36>:start run cmd  rm -rf ——adb -s 214d5c87d330 shell rm -rf /mnt/sdcard/QA-SHOTS-UIA/screendir/*
+<2019-05-20 21:11:36>:now_time is  rm -rf ——1558357896151
+<2019-05-20 21:11:37>:the normal log is： rm -rf ——
+<2019-05-20 21:11:37>:the error log is： rm -rf ——
+<2019-05-20 21:11:37>:now_time is  rm -rf ——1558357897154
+<2019-05-20 21:11:37>:the status id  rm -rf ——0
+<2019-05-20 21:11:37>:<214d5c87d330>正在清空:mnt/sdcard/QA-SHOTS-UIA/opencv/*
+<2019-05-20 21:11:37>:command is adb -s 214d5c87d330 shell rm -rf mnt/sdcard/QA-SHOTS-UIA/opencv/*
+<2019-05-20 21:11:37>:start_time is  rm -rf ——1558358497155——600000
+<2019-05-20 21:11:37>:start run cmd  rm -rf ——adb -s 214d5c87d330 shell rm -rf mnt/sdcard/QA-SHOTS-UIA/opencv/*
+<2019-05-20 21:11:37>:now_time is  rm -rf ——1558357897155
+<2019-05-20 21:11:38>:the normal log is： rm -rf ——
+<2019-05-20 21:11:38>:the error log is： rm -rf ——
+<2019-05-20 21:11:38>:now_time is  rm -rf ——1558357898158
+<2019-05-20 21:11:38>:the status id  rm -rf ——0
+<2019-05-20 21:11:38>:start caselistener
+<2019-05-20 21:11:38>:启动线程，监控case运行时间
+<2019-05-20 21:11:38>:<214d5c87d330>now running UIA2 case:com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001
+<2019-05-20 21:11:38>:clear log cache：1558357898163
+<2019-05-20 21:11:39>:clear log cache end1558357899164
+<2019-05-20 21:11:39>:clear step log：1558357899165
+<2019-05-20 21:11:40>:clear step log end1558357900166
+<2019-05-20 21:11:40>:start logrunnable
+<2019-05-20 21:11:40>:canshu:adb -s 214d5c87d330 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-20 21:11:40>:adb -s 214d5c87d330 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-20 21:11:40>:<214d5c87d330>开始抓取: com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 实时日志
+<2019-05-20 21:11:40>:adb -s 214d5c87d330 logcat *:V -v time
+<2019-05-20 21:11:40>:logcat path is :/home/stf/code/provider/tasks/20190520211007_061056_10/task_result/test_000001/logcat.txt
+<2019-05-20 21:11:40>:command is adb -s 214d5c87d330 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-20 21:11:40>:start_time is  am instrument 214d5c87d330——1558358500171——600000
+<2019-05-20 21:11:40>:start run cmd  am instrument 214d5c87d330——adb -s 214d5c87d330 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-20 21:11:40>:now_time is  am instrument 214d5c87d330——1558357900172
+<2019-05-20 21:12:08>:adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:12:08>:command is adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:12:08>:start_time is  shell ps ——1558358528165——600000
+<2019-05-20 21:12:08>:start run cmd  shell ps ——adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:12:08>:now_time is  shell ps ——1558357928165
+<2019-05-20 21:12:09>:the normal log is： shell ps ——u0_a343   18002 625   1043192 59208 SyS_epoll_ 0000000000 S com.qiyi.baselinetest
+
+<2019-05-20 21:12:09>:the error log is： shell ps ——
+<2019-05-20 21:12:09>:now_time is  shell ps ——1558357929167
+<2019-05-20 21:12:09>:the status id  shell ps ——0
+<2019-05-20 21:12:09>:UiaPid = 18002
+<2019-05-20 21:12:39>:adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:12:39>:command is adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:12:39>:start_time is  shell ps ——1558358559170——600000
+<2019-05-20 21:12:39>:start run cmd  shell ps ——adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:12:39>:now_time is  shell ps ——1558357959170
+<2019-05-20 21:12:40>:the normal log is： shell ps ——u0_a343   18002 625   1052656 59448 SyS_epoll_ 0000000000 S com.qiyi.baselinetest
+
+<2019-05-20 21:12:40>:the error log is： shell ps ——
+<2019-05-20 21:12:40>:now_time is  shell ps ——1558357960171
+<2019-05-20 21:12:40>:the status id  shell ps ——0
+<2019-05-20 21:12:40>:UiaPid = 18002
+<2019-05-20 21:13:10>:adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:13:10>:command is adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:13:10>:start_time is  shell ps ——1558358590173——600000
+<2019-05-20 21:13:10>:start run cmd  shell ps ——adb -s 214d5c87d330 shell ps | grep com.qiyi.baselinetest
+<2019-05-20 21:13:10>:now_time is  shell ps ——1558357990174
+<2019-05-20 21:13:11>:the normal log is： shell ps ——u0_a343   18002 625   1050836 63616 SyS_epoll_ 0000000000 S com.qiyi.baselinetest
+
+<2019-05-20 21:13:11>:the error log is： shell ps ——
+<2019-05-20 21:13:11>:now_time is  shell ps ——1558357991175
+<2019-05-20 21:13:11>:the status id  shell ps ——0
+<2019-05-20 21:13:11>:UiaPid = 18002
+<2019-05-20 21:13:27>:the normal log is： am instrument 214d5c87d330——
+com.qiyi.baselinetest.cases.smoke.function.Test_000001:
+Error in test_000001(com.qiyi.baselinetest.cases.smoke.function.Test_000001):
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:48)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.robot.api.BaseAPI.checkTrue(BaseAPI.java:1646)
+	at com.qiyi.baselinetest.business.baseline.Player.checkHalfPlay(Player.java:89)
+	at com.qiyi.baselinetest.cases.smoke.function.Test_000001.test_000001(Test_000001.java:45)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at android.support.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+	at android.support.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+	at com.qiyi.baselinetest.library.IQiyiTest$CheckPermission$1.evaluate(IQiyiTest.java:398)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+	at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:375)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1939)
+
+
+Time: 103.118
+There was 1 failure:
+1) test_000001(com.qiyi.baselinetest.cases.smoke.function.Test_000001)
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:48)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at com.robot.api.BaseAPI.checkTrue(BaseAPI.java:1646)
+	at com.qiyi.baselinetest.business.baseline.Player.checkHalfPlay(Player.java:89)
+	at com.qiyi.baselinetest.cases.smoke.function.Test_000001.test_000001(Test_000001.java:45)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at android.support.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+	at android.support.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+	at com.qiyi.baselinetest.library.IQiyiTest$CheckPermission$1.evaluate(IQiyiTest.java:398)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+	at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:375)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1939)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+
+<2019-05-20 21:13:27>:the error log is： am instrument 214d5c87d330——
+<2019-05-20 21:13:27>:save junit log
+<2019-05-20 21:13:27>:<214d5c87d330>执行case:com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001失败0
+<2019-05-20 21:13:27>:stop caselistener
+<2019-05-20 21:13:27>:end logrunnable
+<2019-05-20 21:13:27>: current thread InterruptedException 
+<2019-05-20 21:13:29>:Waiting logThread success end
+<2019-05-20 21:13:29>:logThread success end
+<2019-05-20 21:13:29>:XXXXXXXXXXXXXX
+<2019-05-20 21:13:29>:XXXXXXXXXXXXXX true
+本机名称是：stf-bj-tpqa-05
+本机的ip是 ：127.0.1.1
+<2019-05-20 21:13:29>:start filter crash log!
+<2019-05-20 21:13:29>:开始检测是否发生crash!
+<2019-05-20 21:13:29>:logpath is :/home/stf/code/provider/tasks/20190520211007_061056_10/task_result/test_000001/logcat.txt
+<2019-05-20 21:13:29>:getdev_task_id is 20190520211007_061056_10
+<2019-05-20 21:13:29>:http://10.13.43.215/matlab/query/inner/misc/taskproxy.php?method=getTaskInfo&dtid=20190520211007_061056_10
+Transfer-Encoding--->[chunked]
+null--->[HTTP/1.1 200 OK]
+Access-Control-Request-Method--->[*]
+Server--->[nginx/1.12.2]
+Access-Control-Allow-Origin--->[*]
+Connection--->[keep-alive]
+Date--->[Mon, 20 May 2019 13:14:21 GMT]
+X-Powered-By--->[PHP/5.4.16]
+Content-Type--->[text/html; charset=utf-8]
+<2019-05-20 21:13:29>:{"start_time":"2019-05-20 21:10:09","end_time":null,"title":"【分钟级】【7系统】【trunk】","device":{"osv_name":"7.1.2","model":"Redmi 4A","brand":"Xiaomi"},"dev_id":"868689021237244"}
+<2019-05-20 21:13:29>:【分钟级】【7系统】【trunk】
+<2019-05-20 21:13:29>:{"osv_name":"7.1.2","model":"Redmi 4A","brand":"Xiaomi"}
+<2019-05-20 21:13:29>:Xiaomi
+<2019-05-20 21:13:29>:Redmi 4A
+<2019-05-20 21:13:29>:7.1.2
+<2019-05-20 21:13:29>:taskname is :【分钟级】【7系统】【trunk】-868689021237244-Xiaomi-Redmi 4A-7.1.2
+<2019-05-20 21:13:29>:/home/stf/code/provider/log/task/20190520211007_061056_10.txt
+<2019-05-20 21:13:29>:========
+<2019-05-20 21:13:29>:http://10.13.43.127:8888/view/Android基线编译/job/Android_iQiYi_Build_Trunk/
+<2019-05-20 21:13:29>:Android_iQiYi_Build_Trunk
+<2019-05-20 21:13:29>:{"number":7162,"_class":"hudson.model.FreeStyleBuild","url":"http://10.13.43.127:8888/view/Android%E5%9F%BA%E7%BA%BF%E7%BC%96%E8%AF%91/job/Android_iQiYi_Build_Trunk/7162/"}
+<2019-05-20 21:13:29>:7162
+<2019-05-20 21:13:29>:[{"fileName":"IQiyi.apk","relativePath":"output/apk/IQiyi.apk","displayPath":"IQiyi.apk"},{"fileName":"iQiYi_Video_10.5.5_20190520_204425.apk","relativePath":"output/apk/iQiYi_Video_10.5.5_20190520_204425.apk","displayPath":"iQiYi_Video_10.5.5_20190520_204425.apk"},{"fileName":"map.txt","relativePath":"output/mapping/map.txt","displayPath":"map.txt"},{"fileName":"mapping_iqiyi_20190520_204425.txt","relativePath":"output/mapping/mapping_iqiyi_20190520_204425.txt","displayPath":"mapping_iqiyi_20190520_204425.txt"},{"fileName":"resource_map.txt","relativePath":"output/resmapping/resource_map.txt","displayPath":"resource_map.txt"}]
+<2019-05-20 21:13:29>:iQiYi_Video_10.5.5_20190520_204425.apk
+<2019-05-20 21:13:29>:now this apk is:iQiYi_Video_10.5.5_20190520_204425.apk
+<2019-05-20 21:13:29>:/home/stf/code/provider/
+<2019-05-20 21:13:29>:saveapknamefile is /home/stf/code/provider/tasks/【分钟级】【7系统】【trunk】-868689021237244-Xiaomi-Redmi 4A-7.1.2/canuseapkname.txt
+<2019-05-20 21:13:29>:未发生crash，仅处理原有bug状态
+<2019-05-20 21:13:29>:发送邮件通知
+<2019-05-20 21:13:31>:fail
+<2019-05-20 21:13:31>:now :【分钟级】【7系统】【trunk】-868689021237244-Xiaomi-Redmi 4A-7.1.2-iQiYi_Video_10.5.5_20190520_204425.apk case run fail  214d5c87d330-FAILURES Please use iQiYi_Video_10.5.5_20190513_201231.apk
+<2019-05-20 21:13:31>:发送热聊通知
+<2019-05-20 21:13:31>:【分钟级】【7系统】【trunk】-868689021237244-Xiaomi-Redmi 4A-7.1.2-iQiYi_Video_10.5.5_20190520_204425.apk case run fail  214d5c87d330-FAILURES Please use iQiYi_Video_10.5.5_20190513_201231.apk
+<2019-05-20 21:13:31>:linlixing,litianxiang,qingyu,yanjunwang,yusongqi,qiwenfang,
+<2019-05-20 21:13:31>:sign is de4e2cc81078239e666f0be1ae09f63b
+{"code":"A00000","msg":"成功","data":{"opStatus":"succ","msg":"{\"code\":\"A00000\",\"msg\":\"成功\",\"data\":[{\"from\":\"991001129\",\"to\":\"20000228182\",\"chatType\":\"chat\",\"ts\":1558358063012,\"msgid\":\"991001129200002281827b58c130996371b31b2b826dba395439\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"1226647773\",\"chatType\":\"chat\",\"ts\":1558358063012,\"msgid\":\"9910011291226647773fc1e8a199bf15d0572ec74736172dc08\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"1216647819\",\"chatType\":\"chat\",\"ts\":1558358063012,\"msgid\":\"991001129121664781966393cf1030f9861fed698d59bccb8bf\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"20000230026\",\"chatType\":\"chat\",\"ts\":1558358063012,\"msgid\":\"99100112920000230026b404cbe81a8446a297536b793b009ef8\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"1239716520\",\"chatType\":\"chat\",\"ts\":1558358063012,\"msgid\":\"99100112912397165200ad819b0c53602055078eb7b5df0aa39\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"20000217662\",\"chatType\":\"chat\",\"ts\":1558358063012,\"msgid\":\"99100112920000217662d02ecfc07a9f4715f7461e7fcdc031e2\",\"code\":\"A00000\",\"msg\":\"success\"}]}","token":null}}

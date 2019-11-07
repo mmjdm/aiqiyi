@@ -1,0 +1,1159 @@
+[2019-05-14 21:08:53] [STEP] === START ===
+[2019-05-14 21:08:53] [STEP] start run.sh
+[2019-05-14 21:08:53] [STEP] prepare task directory
+[2019-05-14 21:08:53] [STEP] get resource list
+http://10.13.43.215/matlab/query/inner/task/taskinner.php?format=shell&method=getResource&tid=20190514211008_947718_10&account=yusongqi&token=008849
+http##http://10.13.43.127:8888/view/Android基线编译/job/Android_iQiYi_Build_Trunk/lastSuccessfulBuild/artifact/output/apk/IQiyi.apk##testBaseApk.apk&&http##http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testCaseApk.apk##testCaseApk.apk&&http##http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testApk.apk##testApk.apk&&http##http://10.13.43.215/tasks/20190514/21/20190514211008_728937_1/20190514211008_947718_10.dcase.list##case.json
+[2019-05-14 21:08:54] [STEP] download resource file
+http://10.13.43.127:8888/view/Android基线编译/job/Android_iQiYi_Build_Trunk/lastSuccessfulBuild/artifact/output/apk/IQiyi.apk => testBaseApk.apk
+[2019-05-14 21:08:59] [STEP] download resource file OK
+-rw-r--r-- 1 stf stf 57355318 5月  14 21:08 testBaseApk.apk
+[2019-05-14 21:08:59] [STEP] download resource file
+http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testCaseApk.apk => testCaseApk.apk
+[2019-05-14 21:08:59] [STEP] download resource file OK
+-rw-r--r-- 1 stf stf 2609261 5月  14 21:08 testCaseApk.apk
+[2019-05-14 21:08:59] [STEP] download resource file
+http://10.13.43.127:8888/user/yanjunwang/my-views/view/实验室相关/job/Android_AutoCase_BaseLine_Apk_Build/lastSuccessfulBuild/artifact/outputs/testApk.apk => testApk.apk
+[2019-05-14 21:09:01] [STEP] download resource file OK
+-rw-r--r-- 1 stf stf 25733652 5月  14 21:09 testApk.apk
+[2019-05-14 21:09:01] [STEP] download resource file
+http://10.13.43.215/tasks/20190514/21/20190514211008_728937_1/20190514211008_947718_10.dcase.list => case.json
+[2019-05-14 21:09:01] [STEP] download resource file OK
+-rw-r--r-- 1 stf stf 261 5月  14 21:09 case.json
+[2019-05-14 21:09:01] [STEP] get config
+{"self_package":"","run_times":"0","is_plugin":"false"}
+[2019-05-14 21:09:01] [STEP] get script.sh
+http://10.13.43.215/matlab/query/inner/task/taskinner.php?format=shell&method=getScript&name=start&tid=20190514211008_947718_10&account=yusongqi&token=008849
+http://10.13.43.215/matlab/scripts/slns/uiautomator2/start.sh
+[2019-05-14 21:09:02] [STEP] ====== screen lock status - start ======
+    mStatusBar=Window{4ac8ffd u0 StatusBar} isStatusBarKeyguard=false
+[2019-05-14 21:09:02] [STEP] ======
+[2019-05-14 21:09:03] [STEP] ====== screen lock status - stop ======
+[21:09:03 GMT+8][START] ====== SCREEN LOCK DETECTION ======
+[ '    mStatusBar=Window{4ac8ffd u0 StatusBar} isStatusBarKeyguard=false' ]
+[]
+ScreenLock Detection - 1: false
+[21:09:03 GMT+8][ERROR] No need to unlock device
+[21:09:03 GMT+8][END] install process end: 0
+[2019-05-14 21:09:03] [STEP] ====== Network Detection - start ======
+[CMD] adb -s GPG4C19122001998 shell ping -c 5 aip.baidubce.com
+[STDOUT] PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=12.7 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=3.47 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=6.66 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=7.21 ms
+[STDOUT] 64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=3.27 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4003ms
+rtt min/avg/max/mdev = 3.272/6.682/12.795/3.451 ms
+[2019-05-14 21:09:08] [STEP] ====== Network Detection - end ======
+[2019-05-14 21:09:08] [STEP] ====== Airplane Mode - start ======
+mAirplaneModeOn false
+[2019-05-14 21:09:08] [STEP] ====== Airplane Mode - end ======
+[2019-05-14 21:09:08] [STEP] ====== ATX Operation - start ======
+[CMD] adb -s GPG4C19122001998 shell /data/local/tmp/atx-agent server --stop
+[STDOUT] /system/bin/sh: /data/local/tmp/atx-agent: not found
+=== Kill ATX Agent ===
+
+=== After kill ===
+[2019-05-14 21:09:10] [STEP] ====== ATX Operation - end ======
+[2019-05-14 21:09:10] [STEP] start.sh
+/bin/bash start.sh GPG4C19122001998 861015049906627 20190514211008_728937_1 20190514211008_947718_10
+/home/stf/code/provider/tasks/20190514211008_947718_10
+[2019-05-14 21:09:10][STEP] get runner.jar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 59 3528k   59 2115k    0     0  11.1M      0 --:--:-- --:--:-- --:--:-- 11.1M100 3528k  100 3528k    0     0  11.2M      0 --:--:-- --:--:-- --:--:-- 11.1M
+-rw-r--r-- 1 stf stf 3612971 5月  14 21:09 runner.jar
+[2019-05-14 21:09:10][STEP] check files
+总用量 87240
+-rw-r--r-- 1 stf stf      261 5月  14 21:09 case.json
+-rw-r--r-- 1 stf stf       55 5月  14 21:09 config.json
+-rw-r--r-- 1 stf stf  3612971 5月  14 21:09 runner.jar
+-rw-r--r-- 1 stf stf      955 5月  14 21:09 start.sh
+-rw-r--r-- 1 stf stf 25733652 5月  14 21:09 testApk.apk
+-rw-r--r-- 1 stf stf 57355318 5月  14 21:08 testBaseApk.apk
+-rw-r--r-- 1 stf stf  2609261 5月  14 21:08 testCaseApk.apk
+======
+{"self_package":"","run_times":"0","is_plugin":"false"}
+=====
+[2019-05-14 21:09:10][STEP] java -jar runner.jar GPG4C19122001998 861015049906627 20190514211008_728937_1 20190514211008_947718_10 true false
+<2019-05-14 21:09:10>:init args
+<2019-05-14 21:09:10>:args ==== [GPG4C19122001998, 861015049906627, 20190514211008_728937_1, 20190514211008_947718_10, true, true]
+<2019-05-14 21:09:10>:initConfig starttrue
+<2019-05-14 21:09:10>:Start parseing config files
+<2019-05-14 21:09:10>:LabproxyConfigParse case working dir = /home/stf/code/provider/tasks/20190514211008_947718_10/task_result
+<2019-05-14 21:09:10>:lujing/home/stf/code/provider/tasks/20190514211008_947718_10\config.json
+<2019-05-14 21:09:10>:config content = {"self_package":"","run_times":"0","is_plugin":"false"}
+<2019-05-14 21:09:10>:lab parse config.json
+<2019-05-14 21:09:10>:local lab config {"run_times":"0","is_plugin":"false","self_package":""}
+<2019-05-14 21:09:10>:LabproxyResParse case working dir = /home/stf/code/provider/tasks/20190514211008_947718_10/task_result
+<2019-05-14 21:09:10>:apkname=[{"name":"testBaseApk.apk"},{"name":"testApk.apk"},{"name":"testCaseApk.apk"}]
+<2019-05-14 21:09:10>:get base name
+<2019-05-14 21:09:10>:this apk path is :/home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:10>:apkname=[{"name":"testBaseApk.apk"},{"name":"testApk.apk"},{"name":"testCaseApk.apk"}]
+<2019-05-14 21:09:10>:this apk path is :/home/stf/code/provider/tasks/20190514211008_947718_10/testApk.apk
+<2019-05-14 21:09:10>:apkname=[{"name":"testBaseApk.apk"},{"name":"testApk.apk"},{"name":"testCaseApk.apk"}]
+<2019-05-14 21:09:10>:this apk path is :/home/stf/code/provider/tasks/20190514211008_947718_10/testCaseApk.apk
+<2019-05-14 21:09:10>:LabproxyCaseParse case working dir = /home/stf/code/provider/tasks/20190514211008_947718_10/task_result
+<2019-05-14 21:09:10>:parse lab case.json
+<2019-05-14 21:09:10>:local lab case{"set":"smoke.function","cases":[{"owner":"林立星","note":"冒烟case，启动后随便播放视频","method":"com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001","enable":"true"}],"enable":"true"}
+<2019-05-14 21:09:10>:start smoke test
+<2019-05-14 21:09:10>:onoff true
+<2019-05-14 21:09:10>:cases array length = 1
+<2019-05-14 21:09:10>:init case result
+<2019-05-14 21:09:10>:cm running list length = 1
+<2019-05-14 21:09:10>:Start getting apkInfo
+<2019-05-14 21:09:10>:Labproxy don't need download apk
+<2019-05-14 21:09:10>:LabproxyAaptOperation
+<2019-05-14 21:09:10>:Labproxy is getting the version
+<2019-05-14 21:09:10>:get apk version 
+<2019-05-14 21:09:10>:存在：/home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:10>:cmd = aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:10>:command is aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:10>:start_time is  aapt dump badging ——1557839950829——600000
+<2019-05-14 21:09:10>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:10>:now_time is  aapt dump badging ——1557839350829
+<2019-05-14 21:09:11>:the normal log is： aapt dump badging ——package: name='com.qiyi.video' versionCode='81290' versionName='10.5.5' platformBuildVersionName=''
+sdkVersion:'14'
+targetSdkVersion:'26'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='com.android.launcher.permission.INSTALL_SHORTCUT'
+uses-permission: name='com.android.launcher.permission.UNINSTALL_SHORTCUT'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='android.permission.CHANGE_NETWORK_STATE'
+uses-permission: name='android.permission.CHANGE_WIFI_STATE'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'
+uses-permission: name='android.permission.ACCESS_FINE_LOCATION'
+uses-permission: name='android.permission.ACCESS_COARSE_LOCATION'
+uses-permission: name='android.permission.BLUETOOTH_ADMIN'
+uses-permission: name='android.permission.READ_PHONE_STATE'
+uses-permission: name='android.permission.GET_TASKS'
+uses-permission: name='android.permission.CHANGE_WIFI_MULTICAST_STATE'
+uses-permission: name='android.permission.REORDER_TASKS'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.RECEIVE_BOOT_COMPLETED'
+uses-permission: name='android.permission.WRITE_SETTINGS'
+uses-permission: name='android.permission.VIBRATE'
+uses-permission: name='android.permission.DISABLE_KEYGUARD'
+uses-permission: name='com.xiaomi.permission.AUTH_SERVICE'
+uses-permission: name='com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE'
+uses-permission: name='android.permission.CAMERA'
+uses-permission: name='android.permission.MANAGE_ACCOUNTS'
+uses-permission: name='android.permission.GET_ACCOUNTS'
+uses-permission: name='android.permission.AUTHENTICATE_ACCOUNTS'
+uses-permission: name='android.permission.READ_CONTACTS'
+uses-permission: name='android.permission.BLUETOOTH'
+uses-permission: name='android.permission.CHANGE_CONFIGURATION'
+uses-permission: name='android.permission.MODIFY_AUDIO_SETTINGS'
+uses-permission: name='com.google.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.bbk.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.meizu.flyme.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher2.permission.READ_SETTINGS'
+uses-permission: name='android.permission.READ_CALENDAR'
+uses-permission: name='android.permission.WRITE_CALENDAR'
+uses-permission: name='com.qiyi.video.permission.MIPUSH_RECEIVE'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.USE_FINGERPRINT'
+uses-permission: name='android.permission.USE_BIOMETRIC'
+uses-permission: name='org.fidoalliance.uaf.permissions.FIDO_CLIENT'
+uses-permission: name='com.android.vending.BILLING'
+uses-permission: name='android.permission.CALL_PHONE'
+uses-permission: name='android.permission.MOUNT_UNMOUNT_FILESYSTEMS'
+uses-permission: name='com.qti.permission.PROFILER'
+application-label:'ç±å¥èº'
+application-label-zh-HK:'ç±å¥èº'
+application-label-zh-TW:'æå¥è'
+application-label-zh:'ç±å¥èº'
+application-label-en:'iQIYI'
+application-label-zh-CN:'ç±å¥èº'
+application-label-zh-MO:'ç±å¥èº'
+application-icon-120:'r/aa/qiyi_icon.png'
+application-icon-160:'r/t/qiyi_icon.png'
+application-icon-240:'r/e/qiyi_icon.png'
+application-icon-320:'r/w/qiyi_icon.png'
+application-icon-480:'r/ah/qiyi_icon.png'
+application-icon-640:'r/ai/qiyi_icon.png'
+application-icon-65534:'r/t/qiyi_icon.png'
+application-icon-65535:'r/ai/qiyi_icon.png'
+application: label='ç±å¥èº' icon='r/t/qiyi_icon.png'
+application-debuggable
+uses-library-not-required:'org.apache.http.legacy'
+launchable-activity: name='com.qiyi.video.WelcomeActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x20000'
+  uses-feature: name='android.hardware.camera'
+  uses-feature: name='android.hardware.camera.autofocus'
+  uses-feature-not-required: name='android.hardware.camera.flash'
+  uses-feature-not-required: name='android.hardware.camera.front'
+  uses-feature-not-required: name='android.hardware.sensor.accelerometer'
+  uses-feature-not-required: name='android.hardware.sensor.gyroscope'
+  uses-feature-not-required: name='android.hardware.touchscreen'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch.distinct'
+  uses-feature-not-required: name='android.hardware.vr.high_performance'
+  uses-feature-not-required: name='android.software.vr.mode'
+  uses-feature: name='android.hardware.bluetooth'
+  uses-implied-feature: name='android.hardware.bluetooth' reason='requested android.permission.BLUETOOTH permission, requested android.permission.BLUETOOTH_ADMIN permission, and targetSdkVersion > 4'
+  uses-feature: name='android.hardware.location'
+  uses-implied-feature: name='android.hardware.location' reason='requested android.permission.ACCESS_COARSE_LOCATION permission, and requested android.permission.ACCESS_FINE_LOCATION permission'
+  uses-feature: name='android.hardware.location.gps'
+  uses-implied-feature: name='android.hardware.location.gps' reason='requested android.permission.ACCESS_FINE_LOCATION permission'
+  uses-feature: name='android.hardware.location.network'
+  uses-implied-feature: name='android.hardware.location.network' reason='requested android.permission.ACCESS_COARSE_LOCATION permission'
+  uses-feature: name='android.hardware.microphone'
+  uses-implied-feature: name='android.hardware.microphone' reason='requested android.permission.RECORD_AUDIO permission'
+  uses-feature: name='android.hardware.screen.landscape'
+  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'
+  uses-feature: name='android.hardware.screen.portrait'
+  uses-implied-feature: name='android.hardware.screen.portrait' reason='one or more activities have specified a portrait orientation'
+  uses-feature: name='android.hardware.telephony'
+  uses-implied-feature: name='android.hardware.telephony' reason='requested a telephony permission'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission, requested android.permission.CHANGE_WIFI_MULTICAST_STATE permission, and requested android.permission.CHANGE_WIFI_STATE permission'
+main
+other-activities
+other-receivers
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'zh-HK' 'zh-TW' 'zh' 'en' 'zh-CN' 'zh-MO'
+densities: '120' '160' '240' '320' '480' '640' '65534' '65535'
+native-code: 'armeabi'
+
+<2019-05-14 21:09:11>:the error log is： aapt dump badging ——
+<2019-05-14 21:09:11>:BaseApk version is 10.5.5
+<2019-05-14 21:09:11>:now_time is  aapt dump badging ——1557839351843
+<2019-05-14 21:09:11>:the status id  aapt dump badging ——0
+<2019-05-14 21:09:11>:LabproxyAaptOperation
+<2019-05-14 21:09:11>:Labproxy is getting the packageName
+<2019-05-14 21:09:11>:command is aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:11>:start_time is  aapt dump badging ——1557839951852——600000
+<2019-05-14 21:09:11>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testBaseApk.apk
+<2019-05-14 21:09:11>:now_time is  aapt dump badging ——1557839351852
+<2019-05-14 21:09:12>:the normal log is： aapt dump badging ——package: name='com.qiyi.video' versionCode='81290' versionName='10.5.5' platformBuildVersionName=''
+sdkVersion:'14'
+targetSdkVersion:'26'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='com.android.launcher.permission.INSTALL_SHORTCUT'
+uses-permission: name='com.android.launcher.permission.UNINSTALL_SHORTCUT'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='android.permission.CHANGE_NETWORK_STATE'
+uses-permission: name='android.permission.CHANGE_WIFI_STATE'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'
+uses-permission: name='android.permission.ACCESS_FINE_LOCATION'
+uses-permission: name='android.permission.ACCESS_COARSE_LOCATION'
+uses-permission: name='android.permission.BLUETOOTH_ADMIN'
+uses-permission: name='android.permission.READ_PHONE_STATE'
+uses-permission: name='android.permission.GET_TASKS'
+uses-permission: name='android.permission.CHANGE_WIFI_MULTICAST_STATE'
+uses-permission: name='android.permission.REORDER_TASKS'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.RECEIVE_BOOT_COMPLETED'
+uses-permission: name='android.permission.WRITE_SETTINGS'
+uses-permission: name='android.permission.VIBRATE'
+uses-permission: name='android.permission.DISABLE_KEYGUARD'
+uses-permission: name='com.xiaomi.permission.AUTH_SERVICE'
+uses-permission: name='com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE'
+uses-permission: name='android.permission.CAMERA'
+uses-permission: name='android.permission.MANAGE_ACCOUNTS'
+uses-permission: name='android.permission.GET_ACCOUNTS'
+uses-permission: name='android.permission.AUTHENTICATE_ACCOUNTS'
+uses-permission: name='android.permission.READ_CONTACTS'
+uses-permission: name='android.permission.BLUETOOTH'
+uses-permission: name='android.permission.CHANGE_CONFIGURATION'
+uses-permission: name='android.permission.MODIFY_AUDIO_SETTINGS'
+uses-permission: name='com.google.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.android.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.bbk.launcher2.permission.READ_SETTINGS'
+uses-permission: name='com.meizu.flyme.launcher.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher3.permission.READ_SETTINGS'
+uses-permission: name='com.huawei.launcher2.permission.READ_SETTINGS'
+uses-permission: name='android.permission.READ_CALENDAR'
+uses-permission: name='android.permission.WRITE_CALENDAR'
+uses-permission: name='com.qiyi.video.permission.MIPUSH_RECEIVE'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+uses-permission: name='android.permission.USE_FINGERPRINT'
+uses-permission: name='android.permission.USE_BIOMETRIC'
+uses-permission: name='org.fidoalliance.uaf.permissions.FIDO_CLIENT'
+uses-permission: name='com.android.vending.BILLING'
+uses-permission: name='android.permission.CALL_PHONE'
+uses-permission: name='android.permission.MOUNT_UNMOUNT_FILESYSTEMS'
+uses-permission: name='com.qti.permission.PROFILER'
+application-label:'ç±å¥èº'
+application-label-zh-HK:'ç±å¥èº'
+application-label-zh-TW:'æå¥è'
+application-label-zh:'ç±å¥èº'
+application-label-en:'iQIYI'
+application-label-zh-CN:'ç±å¥èº'
+application-label-zh-MO:'ç±å¥èº'
+application-icon-120:'r/aa/qiyi_icon.png'
+application-icon-160:'r/t/qiyi_icon.png'
+application-icon-240:'r/e/qiyi_icon.png'
+application-icon-320:'r/w/qiyi_icon.png'
+application-icon-480:'r/ah/qiyi_icon.png'
+application-icon-640:'r/ai/qiyi_icon.png'
+application-icon-65534:'r/t/qiyi_icon.png'
+application-icon-65535:'r/ai/qiyi_icon.png'
+application: label='ç±å¥èº' icon='r/t/qiyi_icon.png'
+application-debuggable
+uses-library-not-required:'org.apache.http.legacy'
+launchable-activity: name='com.qiyi.video.WelcomeActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x20000'
+  uses-feature: name='android.hardware.camera'
+  uses-feature: name='android.hardware.camera.autofocus'
+  uses-feature-not-required: name='android.hardware.camera.flash'
+  uses-feature-not-required: name='android.hardware.camera.front'
+  uses-feature-not-required: name='android.hardware.sensor.accelerometer'
+  uses-feature-not-required: name='android.hardware.sensor.gyroscope'
+  uses-feature-not-required: name='android.hardware.touchscreen'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch'
+  uses-feature-not-required: name='android.hardware.touchscreen.multitouch.distinct'
+  uses-feature-not-required: name='android.hardware.vr.high_performance'
+  uses-feature-not-required: name='android.software.vr.mode'
+  uses-feature: name='android.hardware.bluetooth'
+  uses-implied-feature: name='android.hardware.bluetooth' reason='requested android.permission.BLUETOOTH permission, requested android.permission.BLUETOOTH_ADMIN permission, and targetSdkVersion > 4'
+  uses-feature: name='android.hardware.location'
+  uses-implied-feature: name='android.hardware.location' reason='requested android.permission.ACCESS_COARSE_LOCATION permission, and requested android.permission.ACCESS_FINE_LOCATION permission'
+  uses-feature: name='android.hardware.location.gps'
+  uses-implied-feature: name='android.hardware.location.gps' reason='requested android.permission.ACCESS_FINE_LOCATION permission'
+  uses-feature: name='android.hardware.location.network'
+  uses-implied-feature: name='android.hardware.location.network' reason='requested android.permission.ACCESS_COARSE_LOCATION permission'
+  uses-feature: name='android.hardware.microphone'
+  uses-implied-feature: name='android.hardware.microphone' reason='requested android.permission.RECORD_AUDIO permission'
+  uses-feature: name='android.hardware.screen.landscape'
+  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'
+  uses-feature: name='android.hardware.screen.portrait'
+  uses-implied-feature: name='android.hardware.screen.portrait' reason='one or more activities have specified a portrait orientation'
+  uses-feature: name='android.hardware.telephony'
+  uses-implied-feature: name='android.hardware.telephony' reason='requested a telephony permission'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission, requested android.permission.CHANGE_WIFI_MULTICAST_STATE permission, and requested android.permission.CHANGE_WIFI_STATE permission'
+main
+other-activities
+other-receivers
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'zh-HK' 'zh-TW' 'zh' 'en' 'zh-CN' 'zh-MO'
+densities: '120' '160' '240' '320' '480' '640' '65534' '65535'
+native-code: 'armeabi'
+
+<2019-05-14 21:09:12>:the error log is： aapt dump badging ——
+<2019-05-14 21:09:12>:BasePkgName is com.qiyi.video
+<2019-05-14 21:09:12>:now_time is  aapt dump badging ——1557839352856
+<2019-05-14 21:09:12>:the status id  aapt dump badging ——0
+<2019-05-14 21:09:12>:command is aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testApk.apk
+<2019-05-14 21:09:12>:start_time is  aapt dump badging ——1557839952857——600000
+<2019-05-14 21:09:12>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testApk.apk
+<2019-05-14 21:09:12>:now_time is  aapt dump badging ——1557839352858
+<2019-05-14 21:09:13>:the normal log is： aapt dump badging ——package: name='com.qiyi.baselinetest' versionCode='1' versionName='1.0' platformBuildVersionName=''
+sdkVersion:'18'
+targetSdkVersion:'26'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+application-label:'Baselinetest'
+application-label-ca:'Baselinetest'
+application-label-da:'Baselinetest'
+application-label-fa:'Baselinetest'
+application-label-ja:'Baselinetest'
+application-label-ka:'Baselinetest'
+application-label-pa:'Baselinetest'
+application-label-ta:'Baselinetest'
+application-label-nb:'Baselinetest'
+application-label-be:'Baselinetest'
+application-label-de:'Baselinetest'
+application-label-ne:'Baselinetest'
+application-label-te:'Baselinetest'
+application-label-af:'Baselinetest'
+application-label-bg:'Baselinetest'
+application-label-th:'Baselinetest'
+application-label-fi:'Baselinetest'
+application-label-hi:'Baselinetest'
+application-label-si:'Baselinetest'
+application-label-vi:'Baselinetest'
+application-label-kk:'Baselinetest'
+application-label-mk:'Baselinetest'
+application-label-sk:'Baselinetest'
+application-label-uk:'Baselinetest'
+application-label-el:'Baselinetest'
+application-label-gl:'Baselinetest'
+application-label-ml:'Baselinetest'
+application-label-nl:'Baselinetest'
+application-label-pl:'Baselinetest'
+application-label-sl:'Baselinetest'
+application-label-tl:'Baselinetest'
+application-label-am:'Baselinetest'
+application-label-km:'Baselinetest'
+application-label-bn:'Baselinetest'
+application-label-in:'Baselinetest'
+application-label-kn:'Baselinetest'
+application-label-mn:'Baselinetest'
+application-label-ko:'Baselinetest'
+application-label-lo:'Baselinetest'
+application-label-ro:'Baselinetest'
+application-label-sq:'Baselinetest'
+application-label-ar:'Baselinetest'
+application-label-fr:'Baselinetest'
+application-label-hr:'Baselinetest'
+application-label-mr:'Baselinetest'
+application-label-sr:'Baselinetest'
+application-label-sr-Latn:'Baselinetest'
+application-label-tr:'Baselinetest'
+application-label-ur:'Baselinetest'
+application-label-bs:'Baselinetest'
+application-label-cs:'Baselinetest'
+application-label-es:'Baselinetest'
+application-label-is:'Baselinetest'
+application-label-ms:'Baselinetest'
+application-label-et:'Baselinetest'
+application-label-it:'Baselinetest'
+application-label-lt:'Baselinetest'
+application-label-pt:'Baselinetest'
+application-label-eu:'Baselinetest'
+application-label-gu:'Baselinetest'
+application-label-hu:'Baselinetest'
+application-label-ru:'Baselinetest'
+application-label-zu:'Baselinetest'
+application-label-lv:'Baselinetest'
+application-label-sv:'Baselinetest'
+application-label-iw:'Baselinetest'
+application-label-sw:'Baselinetest'
+application-label-hy:'Baselinetest'
+application-label-ky:'Baselinetest'
+application-label-my:'Baselinetest'
+application-label-az:'Baselinetest'
+application-label-uz:'Baselinetest'
+application-label-fr-CA:'Baselinetest'
+application-label-en-GB:'Baselinetest'
+application-label-zh-HK:'Baselinetest'
+application-label-zh-CN:'Baselinetest'
+application-label-en-IN:'Baselinetest'
+application-label-pt-BR:'Baselinetest'
+application-label-es-US:'Baselinetest'
+application-label-pt-PT:'Baselinetest'
+application-label-en-AU:'Baselinetest'
+application-label-zh-TW:'Baselinetest'
+application-icon-120:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-160:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-240:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-320:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-480:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-640:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-65534:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application: label='Baselinetest' icon='res/mipmap-anydpi-v26/ic_launcher.xml'
+application-debuggable
+launchable-activity: name='com.qiyi.baselinetest.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.touchscreen'
+  uses-implied-feature: name='android.hardware.touchscreen' reason='default feature for all apps'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'ca' 'da' 'fa' 'ja' 'ka' 'pa' 'ta' 'nb' 'be' 'de' 'ne' 'te' 'af' 'bg' 'th' 'fi' 'hi' 'si' 'vi' 'kk' 'mk' 'sk' 'uk' 'el' 'gl' 'ml' 'nl' 'pl' 'sl' 'tl' 'am' 'km' 'bn' 'in' 'kn' 'mn' 'ko' 'lo' 'ro' 'sq' 'ar' 'fr' 'hr' 'mr' 'sr' 'sr-Latn' 'tr' 'ur' 'bs' 'cs' 'es' 'is' 'ms' 'et' 'it' 'lt' 'pt' 'eu' 'gu' 'hu' 'ru' 'zu' 'lv' 'sv' 'iw' 'sw' 'hy' 'ky' 'my' 'az' 'uz' 'fr-CA' 'en-GB' 'zh-HK' 'zh-CN' 'en-IN' 'pt-BR' 'es-US' 'pt-PT' 'en-AU' 'zh-TW'
+densities: '120' '160' '240' '320' '480' '640' '65534'
+native-code: 'armeabi' 'armeabi-v7a' 'mips' 'x86'
+
+<2019-05-14 21:09:13>:the error log is： aapt dump badging ——
+<2019-05-14 21:09:13>:TestPkgName is com.qiyi.baselinetest
+<2019-05-14 21:09:13>:now_time is  aapt dump badging ——1557839353861
+<2019-05-14 21:09:13>:the status id  aapt dump badging ——0
+<2019-05-14 21:09:13>:command is aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testCaseApk.apk
+<2019-05-14 21:09:13>:start_time is  aapt dump badging ——1557839953865——600000
+<2019-05-14 21:09:13>:start run cmd  aapt dump badging ——aapt dump badging /home/stf/code/provider/tasks/20190514211008_947718_10/testCaseApk.apk
+<2019-05-14 21:09:13>:now_time is  aapt dump badging ——1557839353866
+<2019-05-14 21:09:14>:the normal log is： aapt dump badging ——package: name='com.qiyi.baselinetest.test' versionCode='' versionName='' platformBuildVersionName=''
+sdkVersion:'18'
+targetSdkVersion:'26'
+application: label='' icon=''
+application-debuggable
+uses-library:'android.test.runner'
+feature-group: label=''
+  uses-feature: name='android.hardware.touchscreen'
+  uses-implied-feature: name='android.hardware.touchscreen' reason='default feature for all apps'
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'ca' 'da' 'fa' 'ja' 'ka' 'pa' 'ta' 'nb' 'be' 'de' 'ne' 'te' 'af' 'bg' 'th' 'fi' 'hi' 'si' 'vi' 'kk' 'mk' 'sk' 'uk' 'el' 'gl' 'ml' 'nl' 'pl' 'sl' 'tl' 'am' 'km' 'bn' 'in' 'kn' 'mn' 'ko' 'lo' 'ro' 'sq' 'ar' 'fr' 'hr' 'mr' 'sr' 'sr-Latn' 'tr' 'ur' 'bs' 'cs' 'es' 'is' 'ms' 'et' 'it' 'lt' 'pt' 'eu' 'gu' 'hu' 'ru' 'zu' 'lv' 'sv' 'iw' 'sw' 'hy' 'ky' 'my' 'az' 'uz' 'fr-CA' 'en-GB' 'zh-HK' 'zh-CN' 'en-IN' 'pt-BR' 'es-US' 'pt-PT' 'en-AU' 'zh-TW'
+densities: '160' '240' '320' '480' '640'
+
+<2019-05-14 21:09:14>:the error log is： aapt dump badging ——
+<2019-05-14 21:09:14>:TestCasePkgName is com.qiyi.baselinetest.test
+<2019-05-14 21:09:14>:now_time is  aapt dump badging ——1557839354867
+<2019-05-14 21:09:14>:the status id  aapt dump badging ——0
+<2019-05-14 21:09:14>:Lab start install
+<2019-05-14 21:09:14>:install apk names = [testCaseApk.apk, testBaseApk.apk, testApk.apk]
+<2019-05-14 21:09:14>:apki GPG4C19122001998 testCaseApk.apk 0
+<2019-05-14 21:09:14>:command is apki GPG4C19122001998 testCaseApk.apk 0
+<2019-05-14 21:09:14>:start_time is  apki ——1557839954869——600000
+<2019-05-14 21:09:14>:start run cmd  apki ——apki GPG4C19122001998 testCaseApk.apk 0
+<2019-05-14 21:09:14>:now_time is  apki ——1557839354869
+<2019-05-14 21:09:24>:the normal log is： apki ——[21:09:15 GMT+8][START] start installation: GPG4C19122001998,testCaseApk.apk,0
+====== Network Detect - Start ======
+PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=33.1 ms
+64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=85.3 ms
+64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=15.1 ms
+64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=11.0 ms
+64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=8.91 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 8.915/30.731/85.363/28.622 ms
+
+====== Network Detect - End ======
+====== Airplane Mode - Start ======
+mAirplaneModeOn false
+====== Airplane Mode - End ======
+====== Screen Lock - Start ======
+    mStatusBar=Window{4ac8ffd u0 StatusBar} isStatusBarKeyguard=false
+====== Screen Lock - End ======
+Get AI Type: {"error":0,"msg":"OK","type":1}
+Task ID: 20190514211008_947718_10
+Device Status: { screenLock: 0, pingLoss: 0, flightMode: 0 }
+[STDOUT] [21:09:20 GMT+8][START] start installation: GPG4C19122001998,testCaseApk.apk,0,15818
+
+[STDOUT] package name: com.qiyi.baselinetest.test
+
+[STDOUT] [21:09:21 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm uninstall com.qiyi.baselinetest.test"
+
+[STDOUT] [21:09:21 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:21 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:09:21 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:21 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "rm -rf /data/local/tmp/apk"
+
+[STDOUT] [21:09:21 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:21 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:21 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:21 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "mkdir /data/local/tmp/apk"
+
+[STDOUT] [21:09:21 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:21 GMT+8][EXEC-STDOUT] 
+[21:09:21 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:22 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 push testCaseApk.apk /data/local/tmp/apk
+
+[STDOUT] [21:09:22 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDERR] 2474 KB/s (2609261 bytes in 1.029s)
+
+
+[STDOUT] [21:09:22 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "ls -l /data/local/tmp/apk"
+
+[STDOUT] [21:09:22 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDOUT] total 2552
+-rw-rw-rw- 1 shell shell 2609261 2019-05-14 21:08 testCaseApk.apk
+
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:22 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings put secure accessibility_enabled 1"
+
+[STDOUT] [21:09:22 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:22 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings put secure enabled_accessibility_services jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService"
+
+[STDOUT] [21:09:22 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:22 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:23 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings get secure accessibility_enabled && settings get secure enabled_accessibility_services"
+
+[STDOUT] [21:09:23 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:23 GMT+8][EXEC-STDOUT] 1
+jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService
+
+
+[STDOUT] [21:09:23 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:23 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm install -r /data/local/tmp/apk/testCaseApk.apk"
+
+[STDOUT] [21:09:23 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:23 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:09:23 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:23 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm list package com.qiyi.baselinetest.test"
+
+[STDOUT] [21:09:23 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:23 GMT+8][EXEC-STDOUT] package:com.qiyi.baselinetest.test
+
+
+[STDOUT] [21:09:23 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:24 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm path com.qiyi.baselinetest.test"
+
+[STDOUT] [21:09:24 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:24 GMT+8][EXEC-STDOUT] package:/data/app/com.qiyi.baselinetest.test-afARF9rGpGegp_P3RO2XFQ==/base.apk
+
+
+[STDOUT] [21:09:24 GMT+8][EXEC-STDERR] 
+
+[21:09:24 GMT+8][ERROR] installer is not defined
+[21:09:24 GMT+8][END] apki install process end: -1
+
+<2019-05-14 21:09:24>:the error log is： apki ——
+<2019-05-14 21:09:24>:now_time is  apki ——1557839364064
+<2019-05-14 21:09:25>: handleOutput IOException 
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:170)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:336)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at com.qiyi.runner.util.Shell.handleOutput(Shell.java:180)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:145)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:57)
+	at com.qiyi.runner.work.WorkStep.labInstall(WorkStep.java:105)
+	at com.qiyi.runner.initApk.LabproxyInitApk.install(LabproxyInitApk.java:111)
+	at com.qiyi.runner.main.Runner.initApk(Runner.java:166)
+	at com.qiyi.runner.main.Runner.main(Runner.java:249)
+<2019-05-14 21:09:25>:now_time is  apki ——1557839365066
+<2019-05-14 21:09:25>:the status id  apki ——255
+<2019-05-14 21:09:25>:apki GPG4C19122001998 testBaseApk.apk 0
+<2019-05-14 21:09:25>:command is apki GPG4C19122001998 testBaseApk.apk 0
+<2019-05-14 21:09:25>:start_time is  apki ——1557839965069——600000
+<2019-05-14 21:09:25>:start run cmd  apki ——apki GPG4C19122001998 testBaseApk.apk 0
+<2019-05-14 21:09:25>:now_time is  apki ——1557839365070
+<2019-05-14 21:09:50>:the normal log is： apki ——[21:09:25 GMT+8][START] start installation: GPG4C19122001998,testBaseApk.apk,0
+====== Network Detect - Start ======
+PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=98.4 ms
+64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=16.5 ms
+64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=35.3 ms
+64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=47.1 ms
+64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=6.53 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 6.534/40.804/98.430/32.112 ms
+
+====== Network Detect - End ======
+====== Airplane Mode - Start ======
+mAirplaneModeOn false
+====== Airplane Mode - End ======
+====== Screen Lock - Start ======
+    mStatusBar=Window{4ac8ffd u0 StatusBar} isStatusBarKeyguard=false
+====== Screen Lock - End ======
+Get AI Type: {"error":0,"msg":"OK","type":1}
+Task ID: 20190514211008_947718_10
+Device Status: { screenLock: 0, pingLoss: 0, flightMode: 0 }
+[STDOUT] [21:09:30 GMT+8][START] start installation: GPG4C19122001998,testBaseApk.apk,0,15820
+
+[STDOUT] package name: com.qiyi.video
+
+[STDOUT] [21:09:30 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm uninstall com.qiyi.video"
+
+[STDOUT] [21:09:30 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:30 GMT+8][EXEC-STDOUT] 
+Exception occurred while executing:
+java.lang.IllegalArgumentException: Unknown package: com.qiyi.video
+	at com.android.server.pm.Settings.isOrphaned(Settings.java:4588)
+	at com.android.server.pm.PackageManagerService.isOrphaned(PackageManagerService.java:23116)
+	at com.android.server.pm.PackageManagerService.deletePackageVersioned(PackageManagerService.java:19492)
+	at com.android.server.pm.HwPackageManagerService.deletePackageVersioned(HwPackageManagerService.java:3581)
+	at com.android.server.pm.PackageInstallerService.uninstall(PackageInstallerService.java:750)
+	at com.android.server.pm.PackageManagerShellCommand.runUninstall(PackageManagerShellCommand.java:1515)
+	at com.android.server.pm.PackageManagerShellCommand.onCommand(PackageManagerShellCommand.java:201)
+	at android.os.ShellCommand.exec(ShellCommand.java:103)
+	at com.android.server.pm.PackageManagerService.onShellCommand(PackageManagerService.java:23366)
+	at android.os.Binder.shellCommand(Binder.java:642)
+	at android.os.Binder.onTransact(Binder.java:540)
+	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:2804)
+	at com.android.server.pm.PackageManagerService.onTransact(PackageManagerService.java:4404)
+	at com.android.server.pm.HwPackageManagerService.onTransact(HwPackageManagerService.java:823)
+	at android.os.Binder.execTransact(Binder.java:739)
+
+
+[STDOUT] [21:09:30 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:30 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "rm -rf /data/local/tmp/apk"
+
+[STDOUT] [21:09:30 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:30 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:30 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:31 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "mkdir /data/local/tmp/apk"
+
+[STDOUT] [21:09:31 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:31 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:31 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:48 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 push testBaseApk.apk /data/local/tmp/apk
+
+[STDOUT] [21:09:48 GMT+8][EXEC-ERROR] null
+[21:09:48 GMT+8][EXEC-STDOUT] 
+[21:09:48 GMT+8][EXEC-STDERR] 3270 KB/s (57355318 bytes in 17.123s)
+
+
+[STDOUT] [21:09:48 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "ls -l /data/local/tmp/apk"
+
+[STDOUT] [21:09:48 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDOUT] total 56068
+-rw-rw-rw- 1 shell shell 57355318 2019-05-14 21:08 testBaseApk.apk
+
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:48 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings put secure accessibility_enabled 1"
+
+[STDOUT] [21:09:48 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:48 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings put secure enabled_accessibility_services jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService"
+
+[STDOUT] [21:09:48 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:48 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings get secure accessibility_enabled && settings get secure enabled_accessibility_services"
+
+[STDOUT] [21:09:48 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDOUT] 1
+jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService
+
+
+[STDOUT] [21:09:48 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:50 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm install -r /data/local/tmp/apk/testBaseApk.apk"
+
+[STDOUT] [21:09:50 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:50 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:09:50 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:50 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm list package com.qiyi.video"
+
+[STDOUT] [21:09:50 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:50 GMT+8][EXEC-STDOUT] package:com.qiyi.video
+package:com.qiyi.video.reader
+
+
+[STDOUT] [21:09:50 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:50 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm path com.qiyi.video"
+
+[STDOUT] [21:09:50 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:50 GMT+8][EXEC-STDOUT] package:/data/app/com.qiyi.video-G_lYxtDmEkiNnW8caP6-yg==/base.apk
+
+
+[STDOUT] [21:09:50 GMT+8][EXEC-STDERR] 
+
+[21:09:50 GMT+8][ERROR] installer is not defined
+[21:09:50 GMT+8][END] apki install process end: -1
+
+<2019-05-14 21:09:50>:the error log is： apki ——
+<2019-05-14 21:09:50>:now_time is  apki ——1557839390319
+<2019-05-14 21:09:51>: handleOutput IOException 
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:170)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:336)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at com.qiyi.runner.util.Shell.handleOutput(Shell.java:180)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:145)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:57)
+	at com.qiyi.runner.work.WorkStep.labInstall(WorkStep.java:105)
+	at com.qiyi.runner.initApk.LabproxyInitApk.install(LabproxyInitApk.java:92)
+	at com.qiyi.runner.main.Runner.initApk(Runner.java:166)
+	at com.qiyi.runner.main.Runner.main(Runner.java:249)
+<2019-05-14 21:09:51>:now_time is  apki ——1557839391320
+<2019-05-14 21:09:51>:the status id  apki ——255
+<2019-05-14 21:09:51>:testBaseApk.apk install succeed
+<2019-05-14 21:09:51>:apki GPG4C19122001998 testApk.apk 0
+<2019-05-14 21:09:51>:command is apki GPG4C19122001998 testApk.apk 0
+<2019-05-14 21:09:51>:start_time is  apki ——1557839991322——600000
+<2019-05-14 21:09:51>:start run cmd  apki ——apki GPG4C19122001998 testApk.apk 0
+<2019-05-14 21:09:51>:now_time is  apki ——1557839391323
+<2019-05-14 21:10:08>:the normal log is： apki ——[21:09:52 GMT+8][START] start installation: GPG4C19122001998,testApk.apk,0
+====== Network Detect - Start ======
+PING aip-developer.n.shifen.com (123.125.114.17) 56(84) bytes of data.
+64 bytes from 123.125.114.17: icmp_seq=1 ttl=55 time=36.1 ms
+64 bytes from 123.125.114.17: icmp_seq=2 ttl=55 time=18.2 ms
+64 bytes from 123.125.114.17: icmp_seq=3 ttl=55 time=34.4 ms
+64 bytes from 123.125.114.17: icmp_seq=4 ttl=55 time=11.3 ms
+64 bytes from 123.125.114.17: icmp_seq=5 ttl=55 time=10.1 ms
+
+--- aip-developer.n.shifen.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4003ms
+rtt min/avg/max/mdev = 10.191/22.091/36.160/11.165 ms
+
+====== Network Detect - End ======
+====== Airplane Mode - Start ======
+mAirplaneModeOn false
+====== Airplane Mode - End ======
+====== Screen Lock - Start ======
+    mStatusBar=Window{4ac8ffd u0 StatusBar} isStatusBarKeyguard=false
+====== Screen Lock - End ======
+Get AI Type: {"error":0,"msg":"OK","type":1}
+Task ID: 20190514211008_947718_10
+Device Status: { screenLock: 0, pingLoss: 0, flightMode: 0 }
+[STDOUT] [21:09:57 GMT+8][START] start installation: GPG4C19122001998,testApk.apk,0,15824
+
+[STDOUT] package name: com.qiyi.baselinetest
+
+[STDOUT] [21:09:58 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm uninstall com.qiyi.baselinetest"
+
+[STDOUT] [21:09:58 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:58 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:09:58 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:58 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "rm -rf /data/local/tmp/apk"
+
+[STDOUT] [21:09:58 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:58 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:58 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:09:58 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "mkdir /data/local/tmp/apk"
+
+[STDOUT] [21:09:58 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:09:58 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:09:58 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 push testApk.apk /data/local/tmp/apk
+
+[STDOUT] [21:10:07 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDERR] 3149 KB/s (25733652 bytes in 7.978s)
+
+
+[STDOUT] [21:10:07 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "ls -l /data/local/tmp/apk"
+
+[STDOUT] [21:10:07 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDOUT] total 25160
+-rw-rw-rw- 1 shell shell 25733652 2019-05-14 21:09 testApk.apk
+
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings put secure accessibility_enabled 1"
+
+[STDOUT] [21:10:07 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings put secure enabled_accessibility_services jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService"
+
+[STDOUT] [21:10:07 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDOUT] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:07 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "settings get secure accessibility_enabled && settings get secure enabled_accessibility_services"
+
+[STDOUT] [21:10:07 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDOUT] 1
+jp.co.cyberagent.stf/jp.co.cyberagent.stf.Services.SmartInstallService
+
+
+[STDOUT] [21:10:07 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:08 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm install -r /data/local/tmp/apk/testApk.apk"
+
+[STDOUT] [21:10:08 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDOUT] Success
+
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:08 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm list package com.qiyi.baselinetest"
+
+[STDOUT] [21:10:08 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDOUT] package:com.qiyi.baselinetest.test
+package:com.qiyi.baselinetest
+
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDERR] 
+
+[STDOUT] [21:10:08 GMT+8][EXEC-CMD] adb -s GPG4C19122001998 shell "pm path com.qiyi.baselinetest"
+
+[STDOUT] [21:10:08 GMT+8][EXEC-ERROR] null
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDOUT] package:/data/app/com.qiyi.baselinetest-wi1pWHL1ANqYtCIBgyDJTQ==/base.apk
+
+
+[STDOUT] [21:10:08 GMT+8][EXEC-STDERR] 
+
+[21:10:08 GMT+8][ERROR] installer is not defined
+[21:10:08 GMT+8][END] apki install process end: -1
+
+<2019-05-14 21:10:08>:the error log is： apki ——
+<2019-05-14 21:10:08>:now_time is  apki ——1557839408683
+<2019-05-14 21:10:09>: handleOutput IOException 
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:170)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:336)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at com.qiyi.runner.util.Shell.handleOutput(Shell.java:180)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:145)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:57)
+	at com.qiyi.runner.work.WorkStep.labInstall(WorkStep.java:105)
+	at com.qiyi.runner.initApk.LabproxyInitApk.install(LabproxyInitApk.java:111)
+	at com.qiyi.runner.main.Runner.initApk(Runner.java:166)
+	at com.qiyi.runner.main.Runner.main(Runner.java:249)
+<2019-05-14 21:10:09>:now_time is  apki ——1557839409684
+<2019-05-14 21:10:09>:the status id  apki ——255
+<2019-05-14 21:10:09>:BaseApk LabInstallResult = true
+<2019-05-14 21:10:09>:开始自动化测试
+<2019-05-14 21:10:09>:开始时间:1557839409685
+<2019-05-14 21:10:09>:tims = 1
+<2019-05-14 21:10:09>:写入count值1
+<2019-05-14 21:10:09>:adb -s GPG4C19122001998 push /home/stf/code/provider/tasks/20190514211008_947718_10/count.txt data/local/tmp/count.txt
+<2019-05-14 21:10:09>:command is adb -s GPG4C19122001998 push /home/stf/code/provider/tasks/20190514211008_947718_10/count.txt data/local/tmp/count.txt
+<2019-05-14 21:10:09>:start_time is  push ——1557840009693——600000
+<2019-05-14 21:10:09>:start run cmd  push ——adb -s GPG4C19122001998 push /home/stf/code/provider/tasks/20190514211008_947718_10/count.txt data/local/tmp/count.txt
+<2019-05-14 21:10:09>:now_time is  push ——1557839409693
+<2019-05-14 21:10:10>:the normal log is： push ——
+<2019-05-14 21:10:10>:the error log is： push ——0 KB/s (1 bytes in 0.046s)
+
+<2019-05-14 21:10:10>:not SecurityException
+<2019-05-14 21:10:10>:start run testcase
+<2019-05-14 21:10:10>:case num 1
+<2019-05-14 21:10:10>:<GPG4C19122001998>正在清空:/mnt/sdcard/QA-SHOTS-UIA/screendir/*
+<2019-05-14 21:10:10>:command is adb -s GPG4C19122001998 shell rm -rf /mnt/sdcard/QA-SHOTS-UIA/screendir/*
+<2019-05-14 21:10:10>:start_time is  rm -rf ——1557840010697——600000
+<2019-05-14 21:10:10>:start run cmd  rm -rf ——adb -s GPG4C19122001998 shell rm -rf /mnt/sdcard/QA-SHOTS-UIA/screendir/*
+<2019-05-14 21:10:10>:now_time is  rm -rf ——1557839410697
+<2019-05-14 21:10:11>:the normal log is： rm -rf ——
+<2019-05-14 21:10:11>:the error log is： rm -rf ——
+<2019-05-14 21:10:11>:now_time is  rm -rf ——1557839411698
+<2019-05-14 21:10:11>:the status id  rm -rf ——0
+<2019-05-14 21:10:11>:<GPG4C19122001998>正在清空:mnt/sdcard/QA-SHOTS-UIA/opencv/*
+<2019-05-14 21:10:11>:command is adb -s GPG4C19122001998 shell rm -rf mnt/sdcard/QA-SHOTS-UIA/opencv/*
+<2019-05-14 21:10:11>:start_time is  rm -rf ——1557840011699——600000
+<2019-05-14 21:10:11>:start run cmd  rm -rf ——adb -s GPG4C19122001998 shell rm -rf mnt/sdcard/QA-SHOTS-UIA/opencv/*
+<2019-05-14 21:10:11>:now_time is  rm -rf ——1557839411700
+<2019-05-14 21:10:12>:the normal log is： rm -rf ——
+<2019-05-14 21:10:12>:the error log is： rm -rf ——
+<2019-05-14 21:10:12>:now_time is  rm -rf ——1557839412701
+<2019-05-14 21:10:12>:the status id  rm -rf ——0
+<2019-05-14 21:10:12>:start caselistener
+<2019-05-14 21:10:12>:启动线程，监控case运行时间
+<2019-05-14 21:10:12>:<GPG4C19122001998>now running UIA2 case:com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001
+<2019-05-14 21:10:12>:clear log cache：1557839412704
+<2019-05-14 21:10:13>:clear log cache end1557839413705
+<2019-05-14 21:10:13>:clear step log：1557839413705
+<2019-05-14 21:10:14>:clear step log end1557839414705
+<2019-05-14 21:10:14>:start logrunnable
+<2019-05-14 21:10:14>:canshu:adb -s GPG4C19122001998 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-14 21:10:14>:adb -s GPG4C19122001998 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-14 21:10:14>:<GPG4C19122001998>开始抓取: com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 实时日志
+<2019-05-14 21:10:14>:adb -s GPG4C19122001998 logcat *:V -v time
+<2019-05-14 21:10:14>:logcat path is :/home/stf/code/provider/tasks/20190514211008_947718_10/task_result/test_000001/logcat.txt
+<2019-05-14 21:10:14>:command is adb -s GPG4C19122001998 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-14 21:10:14>:start_time is  am instrument GPG4C19122001998——1557840014709——600000
+<2019-05-14 21:10:14>:start run cmd  am instrument GPG4C19122001998——adb -s GPG4C19122001998 shell am instrument  -e class com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001 -w  com.qiyi.baselinetest.test/android.support.test.runner.AndroidJUnitRunner
+<2019-05-14 21:10:14>:now_time is  am instrument GPG4C19122001998——1557839414709
+<2019-05-14 21:10:17>:the normal log is： am instrument GPG4C19122001998——java.lang.IllegalStateException: UiAutomationService android.accessibilityservice.IAccessibilityServiceClient$Stub$Proxy@2a1749dalready registered!
+	at android.os.Parcel.createException(Parcel.java:1961)
+	at android.os.Parcel.readException(Parcel.java:1921)
+	at android.os.Parcel.readException(Parcel.java:1871)
+	at android.view.accessibility.IAccessibilityManager$Stub$Proxy.registerUiTestAutomationService(IAccessibilityManager.java:409)
+	at android.app.UiAutomationConnection.registerUiTestAutomationServiceLocked(UiAutomationConnection.java:399)
+	at android.app.UiAutomationConnection.connect(UiAutomationConnection.java:97)
+	at android.app.IUiAutomationConnection$Stub.onTransact(IUiAutomationConnection.java:62)
+	at android.os.Binder.execTransact(Binder.java:739)
+Caused by: android.os.RemoteException: Remote stack trace:
+	at com.android.server.accessibility.UiAutomationManager.registerUiTestAutomationServiceLocked(UiAutomationManager.java:94)
+	at com.android.server.accessibility.AccessibilityManagerService.registerUiTestAutomationService(AccessibilityManagerService.java:817)
+	at android.view.accessibility.IAccessibilityManager$Stub.onTransact(IAccessibilityManager.java:159)
+	at android.os.Binder.execTransact(Binder.java:739)
+
+
+com.qiyi.baselinetest.cases.smoke.function.Test_000001:
+Error in test_000001(com.qiyi.baselinetest.cases.smoke.function.Test_000001):
+java.lang.ExceptionInInitializerError
+	at com.robot.env.TestParent.<init>(TestParent.java:87)
+	at com.qiyi.baselinetest.library.IQiyiTest.<init>(IQiyiTest.java:95)
+	at com.qiyi.baselinetest.cases.smoke.function.Test_000001.<init>(Test_000001.java:14)
+	at java.lang.reflect.Constructor.newInstance0(Native Method)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:217)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:266)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+	at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:375)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2252)
+Caused by: java.lang.IllegalStateException: UiAutomationService android.accessibilityservice.IAccessibilityServiceClient$Stub$Proxy@2a1749dalready registered!
+	at android.os.Parcel.createException(Parcel.java:1961)
+	at android.os.Parcel.readException(Parcel.java:1921)
+	at android.os.Parcel.readException(Parcel.java:1871)
+	at android.app.IUiAutomationConnection$Stub$Proxy.connect(IUiAutomationConnection.java:255)
+	at android.app.UiAutomation.connect(UiAutomation.java:238)
+	at android.app.Instrumentation.getUiAutomation(Instrumentation.java:2223)
+	at android.app.Instrumentation.getUiAutomation(Instrumentation.java:2180)
+	at android.support.test.uiautomator.UiDevice.<init>(UiDevice.java:105)
+	at android.support.test.uiautomator.UiDevice.getInstance(UiDevice.java:269)
+	at com.robot.util.Shell.<clinit>(Shell.java:23)
+	... 32 more
+INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0
+
+<2019-05-14 21:10:17>:the error log is： am instrument GPG4C19122001998——
+<2019-05-14 21:10:17>:save junit log
+<2019-05-14 21:10:17>:<GPG4C19122001998>执行case:com.qiyi.baselinetest.cases.smoke.function.Test_000001#test_000001失败0
+<2019-05-14 21:10:17>:stop caselistener
+<2019-05-14 21:10:17>:end logrunnable
+<2019-05-14 21:10:17>: current thread InterruptedException 
+<2019-05-14 21:10:19>:Waiting logThread success end
+<2019-05-14 21:10:19>:logThread success end
+<2019-05-14 21:10:19>:XXXXXXXXXXXXXX
+<2019-05-14 21:10:19>:XXXXXXXXXXXXXX true
+本机名称是：stf-OptiPlex-7010
+本机的ip是 ：127.0.1.1
+<2019-05-14 21:10:19>:start filter crash log!
+<2019-05-14 21:10:19>:开始检测是否发生crash!
+<2019-05-14 21:10:19>:logpath is :/home/stf/code/provider/tasks/20190514211008_947718_10/task_result/test_000001/logcat.txt
+<2019-05-14 21:10:19>:getdev_task_id is 20190514211008_947718_10
+<2019-05-14 21:10:19>:http://10.13.43.215/matlab/query/inner/misc/taskproxy.php?method=getTaskInfo&dtid=20190514211008_947718_10
+Transfer-Encoding--->[chunked]
+null--->[HTTP/1.1 200 OK]
+Access-Control-Request-Method--->[*]
+Server--->[nginx/1.12.2]
+Access-Control-Allow-Origin--->[*]
+Connection--->[keep-alive]
+Date--->[Tue, 14 May 2019 13:11:35 GMT]
+X-Powered-By--->[PHP/5.4.16]
+Content-Type--->[text/html; charset=utf-8]
+<2019-05-14 21:10:19>:{"start_time":"2019-05-14 21:10:09","end_time":null,"title":"【分钟级】【9系统】【trunk】","device":{"osv_name":"9","model":"VCE-AL00","brand":"HUAWEI"},"dev_id":"861015049906627"}
+<2019-05-14 21:10:19>:【分钟级】【9系统】【trunk】
+<2019-05-14 21:10:19>:{"osv_name":"9","model":"VCE-AL00","brand":"HUAWEI"}
+<2019-05-14 21:10:19>:HUAWEI
+<2019-05-14 21:10:19>:VCE-AL00
+<2019-05-14 21:10:19>:9
+<2019-05-14 21:10:19>:taskname is :【分钟级】【9系统】【trunk】-861015049906627-HUAWEI-VCE-AL00-9
+<2019-05-14 21:10:19>:/home/stf/code/provider/log/task/20190514211008_947718_10.txt
+<2019-05-14 21:10:19>:========
+<2019-05-14 21:10:19>:http://10.13.43.127:8888/view/Android基线编译/job/Android_iQiYi_Build_Trunk/
+<2019-05-14 21:10:19>:Android_iQiYi_Build_Trunk
+<2019-05-14 21:10:19>:{"number":7085,"_class":"hudson.model.FreeStyleBuild","url":"http://10.13.43.127:8888/view/Android%E5%9F%BA%E7%BA%BF%E7%BC%96%E8%AF%91/job/Android_iQiYi_Build_Trunk/7085/"}
+<2019-05-14 21:10:19>:7085
+<2019-05-14 21:10:19>:[{"fileName":"IQiyi.apk","relativePath":"output/apk/IQiyi.apk","displayPath":"IQiyi.apk"},{"fileName":"iQiYi_Video_10.5.5_20190514_193632.apk","relativePath":"output/apk/iQiYi_Video_10.5.5_20190514_193632.apk","displayPath":"iQiYi_Video_10.5.5_20190514_193632.apk"},{"fileName":"QYVideoClient-debug.apk","relativePath":"output/apk/QYVideoClient-debug.apk","displayPath":"QYVideoClient-debug.apk"},{"fileName":"map.txt","relativePath":"output/mapping/map.txt","displayPath":"map.txt"},{"fileName":"mapping_iqiyi_20190514_193632.txt","relativePath":"output/mapping/mapping_iqiyi_20190514_193632.txt","displayPath":"mapping_iqiyi_20190514_193632.txt"},{"fileName":"resource_map.txt","relativePath":"output/resmapping/resource_map.txt","displayPath":"resource_map.txt"}]
+<2019-05-14 21:10:19>:iQiYi_Video_10.5.5_20190514_193632.apk
+<2019-05-14 21:10:19>:now this apk is:iQiYi_Video_10.5.5_20190514_193632.apk
+<2019-05-14 21:10:19>:/home/stf/code/provider/
+<2019-05-14 21:10:19>:saveapknamefile is /home/stf/code/provider/tasks/【分钟级】【9系统】【trunk】-861015049906627-HUAWEI-VCE-AL00-9/canuseapkname.txt
+<2019-05-14 21:10:19>:Could not find the file /home/stf/code/provider/tasks/【分钟级】【9系统】【trunk】-861015049906627-HUAWEI-VCE-AL00-9/canuseapkname.txt
+java.io.FileNotFoundException: /home/stf/code/provider/tasks/【分钟级】【9系统】【trunk】-861015049906627-HUAWEI-VCE-AL00-9/canuseapkname.txt (没有那个文件或目录)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at com.qiyi.runner.util.IO.read(IO.java:49)
+	at com.qiyi.runner.work.CrashMonitor.filterlogcat(CrashMonitor.java:111)
+	at com.qiyi.runner.work.CrashMonitor.startcrashMonitor(CrashMonitor.java:85)
+	at com.qiyi.runner.work.WorkRunnable$2.onExecutedFailed(WorkRunnable.java:178)
+	at com.qiyi.runner.util.Shell.execute(Shell.java:63)
+	at com.qiyi.runner.work.WorkStep.executeUIA2(WorkStep.java:319)
+	at com.qiyi.runner.work.WorkRunnable.executeCase(WorkRunnable.java:169)
+	at com.qiyi.runner.work.WorkRunnable.run(WorkRunnable.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+<2019-05-14 21:10:19>:此任务暂时没有成功过的apk
+<2019-05-14 21:10:19>:未发生crash，仅处理原有bug状态
+<2019-05-14 21:10:19>:发送邮件通知
+<2019-05-14 21:10:19>:fail
+<2019-05-14 21:10:19>:now :【分钟级】【9系统】【trunk】-861015049906627-HUAWEI-VCE-AL00-9-iQiYi_Video_10.5.5_20190514_193632.apk case run fail  GPG4C19122001998-ExceptionInInitializerError 此任务暂时没有成功过的apk
+<2019-05-14 21:10:19>:发送热聊通知
+<2019-05-14 21:10:19>:【分钟级】【9系统】【trunk】-861015049906627-HUAWEI-VCE-AL00-9-iQiYi_Video_10.5.5_20190514_193632.apk case run fail  GPG4C19122001998-ExceptionInInitializerError 此任务暂时没有成功过的apk
+<2019-05-14 21:10:19>:linlixing,litianxiang,qingyu,yanjunwang,yusongqi,qiwenfang,
+<2019-05-14 21:10:19>:sign is 7c262aaab3cedf35917c57b1ae52015d
+{"code":"A00000","msg":"成功","data":{"opStatus":"succ","msg":"{\"code\":\"A00000\",\"msg\":\"成功\",\"data\":[{\"from\":\"991001129\",\"to\":\"20000228182\",\"chatType\":\"chat\",\"ts\":1557839496407,\"msgid\":\"99100112920000228182c4cc2e7ae0cd6d3136026428f6a8ce41\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"1226647773\",\"chatType\":\"chat\",\"ts\":1557839496407,\"msgid\":\"991001129122664777390490060920b47d126327f5b23c79df9\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"1216647819\",\"chatType\":\"chat\",\"ts\":1557839496407,\"msgid\":\"9910011291216647819e600303cdacf2f20567aad0467aedabe\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"20000230026\",\"chatType\":\"chat\",\"ts\":1557839496407,\"msgid\":\"99100112920000230026b621d063794e4ea112dde827a2578347\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"1239716520\",\"chatType\":\"chat\",\"ts\":1557839496407,\"msgid\":\"991001129123971652084ca80c2d1adc2a9cce77050211c1043\",\"code\":\"A00000\",\"msg\":\"success\"},{\"from\":\"991001129\",\"to\":\"20000217662\",\"chatType\":\"chat\",\"ts\":1557839496407,\"msgid\":\"9910011292000021766291b657b4624733712d97fa17be3b68f2\",\"code\":\"A00000\",\"msg\":\"success\"}]}","token":null}}

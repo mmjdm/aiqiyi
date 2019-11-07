@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* css 代码  */
+        </style>
+        <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    </head>
+    <body>
+        <div id="container" style="max-width:1800px;height:900px"></div>
+        <script>
+            // JS 代码
+            var chart = Highcharts.chart('container', {
+		title: {
+				text: '准入各个阶段耗时图'
+		},
+		subtitle: {
+				text: '数据来源：runner投递'
+		},
+		yAxis: {
+				title: {
+						text: '消耗时间'
+				}
+		},
+		legend: {
+				layout: 'vertical',
+				align: 'right',
+				verticalAlign: 'middle'
+		},
+		plotOptions: {
+				series: {
+						label: {
+								connectorAllowed: false
+						},
+						pointStart: 0
+				}
+		},
+		series: [{
+				name: 'runner执行总时长',
+				data: [649,633,637,622,627,651,633,649,637,643,649,660,653,664,653,656,660,643,683,693,677,656,666,664,666,673,684,676,666,666,662,674,666,649,674,670,643,655,655,661,675,,653,]//runner执行总时长数据
+		}, {
+				name: 'runner初始化时长',
+				data: [132,121,123,118,119,130,128,132,129,124,128,131,129,137,133,130,132,122,133,138,139,138,138,135,137,140,142,137,134,135,135,140,137,137,138,138,126,128,134,137,138,1570706904,134,]//runner初始化时长数据
+		}, {
+				name: 'runner安装apk时长',
+				data: [128,117,119,113,114,125,123,128,125,119,124,126,124,133,127,126,128,118,129,134,135,134,134,130,133,136,136,132,130,130,131,136,133,133,134,132,122,124,130,133,133,,128,]//runner安装apk时长数据
+		}, {
+				name: '冒烟用例1执行时长',
+				data: [131,128,137,126,135,129,124,135,132,137,138,138,133,131,138,137,140,138,150,144,149,137,136,140,129,138,144,140,142,140,141,141,136,137,139,140,139,136,141,137,143,1570706904,130,]//冒烟用例1执行时长数据
+		}, {
+				name: '冒烟用例2执行时长',
+				data: [92,97,96,93,92,100,99,91,92,94,101,99,97,96,97,97,100,98,108,100,103,95,104,98,104,103,105,101,104,99,96,101,100,97,100,97,98,92,94,96,102,0,95,]//冒烟用例2执行时长数据
+		}, {
+				name: '冒烟用例3执行时长',
+				data: [111,112,108,107,107,111,109,110,111,111,108,109,112,112,111,107,108,109,114,113,107,112,109,114,115,112,115,111,115,111,114,112,116,106,119,117,108,118,113,113,119,0,110,]//冒烟用例3执行时长数据
+		}, {
+				name: '冒烟用例4执行时长',
+				data: [80,72,75,76,71,76,72,78,72,72,72,78,76,87,72,79,75,73,76,84,71,73,78,75,76,77,78,78,73,74,74,77,72,69,76,73,70,78,73,73,71,0,76,]//冒烟用例4执行时长数据
+		}, {
+				name: '冒烟用例5执行时长',
+				data: [71,72,67,70,71,72,68,71,68,71,71,72,71,69,69,72,72,70,70,79,74,67,69,71,72,70,69,75,67,73,69,70,71,72,68,73,68,70,68,72,71,0,70,]//冒烟用例5执行时长数据
+		}],
+		responsive: {
+				rules: [{
+						condition: {
+								maxWidth: 3500
+						},
+						chartOptions: {
+								legend: {
+										layout: 'horizontal',
+										align: 'center',
+										verticalAlign: 'bottom'
+								}
+						}
+				}]
+		}
+});
+        </script>
+    </body>
+</html>
